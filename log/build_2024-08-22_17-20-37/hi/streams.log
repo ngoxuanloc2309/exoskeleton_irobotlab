@@ -1,0 +1,60 @@
+[0.008s] Invoking command in '/home/logan/exos_new_ws/build/hi': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/hi -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/hi
+[0.068s] -- The C compiler identification is GNU 11.4.0
+[0.130s] -- The CXX compiler identification is GNU 11.4.0
+[0.138s] -- Detecting C compiler ABI info
+[0.217s] -- Detecting C compiler ABI info - done
+[0.224s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.224s] -- Detecting C compile features
+[0.225s] -- Detecting C compile features - done
+[0.228s] -- Detecting CXX compiler ABI info
+[0.324s] -- Detecting CXX compiler ABI info - done
+[0.331s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.331s] -- Detecting CXX compile features
+[0.332s] -- Detecting CXX compile features - done
+[0.335s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.459s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.563s] -- Configuring done
+[0.565s] -- Generating done
+[0.565s] -- Build files have been written to: /home/logan/exos_new_ws/build/hi
+[0.569s] Invoked command in '/home/logan/exos_new_ws/build/hi' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/hi -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/hi
+[0.571s] Invoking command in '/home/logan/exos_new_ws/build/hi': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/hi -- -j12 -l12
+[0.602s] Invoked command in '/home/logan/exos_new_ws/build/hi' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/hi -- -j12 -l12
+[0.626s] Invoking command in '/home/logan/exos_new_ws/build/hi': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/hi
+[0.631s] -- Install configuration: ""
+[0.631s] -- Installing: /home/logan/exos_new_ws/install/hi/share/ament_index/resource_index/package_run_dependencies/hi
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/ament_index/resource_index/parent_prefix_path/hi
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/environment/ament_prefix_path.sh
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/environment/ament_prefix_path.dsv
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/environment/path.sh
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/environment/path.dsv
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/local_setup.bash
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/local_setup.sh
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/local_setup.zsh
+[0.632s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/local_setup.dsv
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/package.dsv
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/ament_index/resource_index/packages/hi
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/cmake/hiConfig.cmake
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/cmake/hiConfig-version.cmake
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/package.xml
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/move_group.launch.py
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/demo.launch.py
+[0.633s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/warehouse_db.launch.py
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/static_virtual_joint_tfs.launch.py
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/setup_assistant.launch.py
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/moveit_rviz.launch.py
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/spawn_controllers.launch.py
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/launch/rsp.launch.py
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/moveit_controllers.yaml
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/tongquan_sldasm.urdf.xacro
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/moveit.rviz
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/tongquan_sldasm.ros2_control.xacro
+[0.634s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/kinematics.yaml
+[0.635s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/tongquan_sldasm.srdf
+[0.635s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/joint_limits.yaml
+[0.635s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/pilz_cartesian_limits.yaml
+[0.635s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/initial_positions.yaml
+[0.635s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/config/ros2_controllers.yaml
+[0.635s] -- Installing: /home/logan/exos_new_ws/install/hi/share/hi/.setup_assistant
+[0.637s] Invoked command in '/home/logan/exos_new_ws/build/hi' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/hi

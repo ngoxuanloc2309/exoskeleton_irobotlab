@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="tongquan_sldasm">  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-9.3338E-06 3.2733E-05 -0.53944"
+        rpy="0 0 0" />
+      <mass
+        value="30000.65" />
+      <inertia
+        ixx="14.781"
+        ixy="-1.8274E-05"
+        ixz="-1.3917E-05"
+        iyy="9.8439"
+        iyz="8.6487E-05"
+        izz="11.964" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="chan_trai_link">
+    <inertial>
+      <origin
+        xyz="0.025602 0.039965 0.18161"
+        rpy="0 0 0" />
+      <mass
+        value="1.6468" />
+      <inertia
+        ixx="0.0057841"
+        ixy="-0.00017067"
+        ixz="8.6921E-05"
+        iyy="0.0055685"
+        iyz="-0.0011023"
+        izz="0.0013458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_trai_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_trai_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0.296 0 -0.1735"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chan_trai_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.93"
+      effort="10"
+      velocity="0.2" />
+  </joint>
+  <link
+    name="dau_goi_trai_link">
+    <inertial>
+      <origin
+        xyz="-0.029277 0.01187 0.20599"
+        rpy="0 0 0" />
+      <mass
+        value="1.5001" />
+      <inertia
+        ixx="0.0026812"
+        ixy="-0.00030152"
+        ixz="8.0261E-05"
+        iyy="0.0025427"
+        iyz="-3.1952E-05"
+        izz="0.0018036" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_trai_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_trai_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.034 0.11203 0.4"
+      rpy="0 0 0" />
+    <parent
+      link="chan_trai_link" />
+    <child
+      link="dau_goi_trai_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.93"
+      upper="0"
+      effort="10"
+      velocity="0.2" />
+  </joint>
+  <link
+    name="chan_phai_link">
+    <inertial>
+      <origin
+        xyz="0.071822 0.047252 0.17983"
+        rpy="0 0 0" />
+      <mass
+        value="1.6468" />
+      <inertia
+        ixx="0.0057775"
+        ixy="-0.00013256"
+        ixz="4.1809E-05"
+        iyy="0.0055748"
+        iyz="-0.0011036"
+        izz="0.0013461" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_phai_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_phai_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="-0.394 0 -0.1735"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chan_phai_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.93"
+      effort="10"
+      velocity="0.2" />
+  </joint>
+  <link
+    name="dau_goi_phai_link">
+    <inertial>
+      <origin
+        xyz="0.067649 0.022934 0.2046"
+        rpy="0 0 0" />
+      <mass
+        value="1.5001" />
+      <inertia
+        ixx="0.0023016"
+        ixy="0.00010156"
+        ixz="-4.0578E-05"
+        iyy="0.0029164"
+        iyz="-7.8537E-05"
+        izz="0.0018094" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_phai_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_phai_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.034 0.11203 0.4"
+      rpy="0 0 0" />
+    <parent
+      link="chan_phai_link" />
+    <child
+      link="dau_goi_phai_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.93"
+      upper="0"
+      effort="10"
+      velocity="0.2" />
+  </joint>
+  <transmission name="link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="link_2_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_2">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="link_2_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+
+  <transmission name="link_3_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_3">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="link_3_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+
+  <transmission name="link_4_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_4">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="link_4_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+
+
+<ros2_control name="GazeboSimSystem" type="system"> <!--MyRobotHardware-->
+  <hardware>
+    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </hardware>
+  <joint name="joint_1">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="joint_2">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="joint_3">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="joint_4">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+</ros2_control>
+
+ <gazebo>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <ros>
+     <!--  <remapping>/joint_state_broadcaster/joint_state_broadcaster:=/joint_state_broadcaster</remapping>
+      <remapping>/joint_states:=/custom_joint_states</remapping>
+      <remapping>/chan_phai_controller/joint_trajectory:=/joint_trajectory</remapping>
+      <remapping>/chan_trai_controller/joint_trajectory:=/joint_trajectory</remapping>-->
+    </ros>
+    <!-- <robotNamespace>/</robotNamespace>
+    <robotParam>robot_description</robotParam>
+    <robot_param_node>robot_state_publisher</robot_param_node>
+    <controlPeriod>0.001</controlPeriod> -->
+    <!-- <parameter_file>/home/kienpvt/exos_new_ws/src/tongquan_sldasm/config/ros2_controllers.yaml</parameter_file> -->
+    <!-- <parameters>$(find tongquan_sldasm)/config/ros2_controllers.yaml</parameters> -->
+
+  <!--  <parameters>/home/logan/exos_new_ws/src/tongquan_sldasm/config/ros2_controllers.yaml</parameters> -->
+    <parameters>/home/logan/exos_new_ws/src/tongquan_sldasm/config/ros2_controllers.yaml</parameters>   
+    <!-- <robotSimType>gazebo_ros2_control/DefaultRobotHWSim</robotSimType> -->
+  </plugin>
+ </gazebo>
+
+ <gazebo reference="chan_trai_link">
+    <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="dau_goi_trai_link">
+    <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="chan_phai_link">
+    <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="dau_goi_phai_link">
+    <selfCollide>true</selfCollide>
+</gazebo>
+
+
+</robot>

@@ -1,0 +1,39 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/logan/exos_new_ws/build/tongquan_sldasm
+-- Install configuration: ""
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config/joint_names_tongquan.SLDASM.yaml
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/display.launch.py
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/gazebo.launch.py
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_phai_link.STL
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_trai_link.STL
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_trai_link.STL
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_phai_link.STL
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/base_link.STL
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/tongquan.SLDASM.csv
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/tongquan_sldasm.urdf
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/ament_index/resource_index/package_run_dependencies/tongquan_sldasm
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/ament_index/resource_index/parent_prefix_path/tongquan_sldasm
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/ament_prefix_path.sh
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/ament_prefix_path.dsv
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/path.sh
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/path.dsv
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.bash
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.sh
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.zsh
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.dsv
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.dsv
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/ament_index/resource_index/packages/tongquan_sldasm
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/cmake/tongquan_sldasmConfig.cmake
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/cmake/tongquan_sldasmConfig-version.cmake
+-- Installing: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.xml

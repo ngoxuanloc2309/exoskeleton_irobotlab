@@ -1,0 +1,40 @@
+[0.009s] Invoking command in '/home/logan/exos_new_ws/build/exos_new_moveIt2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/exos_new_moveIt2 -- -j12 -l12
+[0.056s] Invoked command in '/home/logan/exos_new_ws/build/exos_new_moveIt2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/exos_new_moveIt2 -- -j12 -l12
+[0.087s] Invoking command in '/home/logan/exos_new_ws/build/exos_new_moveIt2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/exos_new_moveIt2
+[0.095s] -- Install configuration: ""
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/ament_index/resource_index/package_run_dependencies/exos_new_moveIt2
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/ament_index/resource_index/parent_prefix_path/exos_new_moveIt2
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/environment/ament_prefix_path.sh
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/environment/ament_prefix_path.dsv
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/environment/path.sh
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/environment/path.dsv
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/local_setup.bash
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/local_setup.sh
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/local_setup.zsh
+[0.096s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/local_setup.dsv
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/package.dsv
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/ament_index/resource_index/packages/exos_new_moveIt2
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/cmake/exos_new_moveIt2Config.cmake
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/cmake/exos_new_moveIt2Config-version.cmake
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/package.xml
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/move_group.launch.py
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/demo.launch.py
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/warehouse_db.launch.py
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/static_virtual_joint_tfs.launch.py
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/setup_assistant.launch.py
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/moveit_rviz.launch.py
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/spawn_controllers.launch.py
+[0.097s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/launch/rsp.launch.py
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/tongquan_sldasm.urdf.xacro
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/moveit.rviz
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/tongquan_sldasm.ros2_control.xacro
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/kinematics.yaml
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/tongquan_sldasm.srdf
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/joint_limits.yaml
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/pilz_cartesian_limits.yaml
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/initial_positions.yaml
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/config/ros2_controllers.yaml
+[0.098s] -- Up-to-date: /home/logan/exos_new_ws/install/exos_new_moveIt2/share/exos_new_moveIt2/.setup_assistant
+[0.099s] Invoked command in '/home/logan/exos_new_ws/build/exos_new_moveIt2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/exos_new_moveIt2

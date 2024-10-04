@@ -1,0 +1,12 @@
+[0.012s] Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12
+[0.059s] Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12
+[0.098s] Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/tongquan_sldasm
+[0.106s] -- Install configuration: ""
+[0.106s] -- Up-to-date: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config
+[0.107s] [31mCMake Error at cmake_install.cmake:46 (file):
+[0.107s]   file INSTALL cannot find
+[0.107s]   "/home/logan/exos_new_ws/src/tongquan_sldasm/config/joint_names_tongquan.SLDASM.yaml":
+[0.107s]   Permission denied.
+[0.107s] 
+[0.107s] [0m
+[0.108s] Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/tongquan_sldasm

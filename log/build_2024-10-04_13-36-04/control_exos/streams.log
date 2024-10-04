@@ -1,0 +1,22 @@
+[0.017s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.049s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.305s] Traceback (most recent call last):
+[0.305s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.305s]     from ament_package.templates import get_environment_hook_template_path
+[0.305s] ModuleNotFoundError: No module named 'ament_package'
+[0.326s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.326s]   execute_process(/usr/bin/python3
+[0.327s]   /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.327s]   /home/logan/exos_new_ws/build/control_exos/ament_cmake_package_templates/templates.cmake)
+[0.327s]   returned error code 1
+[0.327s] Call Stack (most recent call first):
+[0.327s]   /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.327s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.327s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.327s]   CMakeLists.txt:5 (find_package)
+[0.328s] 
+[0.328s] [0m
+[0.328s] -- Configuring incomplete, errors occurred!
+[0.328s] See also "/home/logan/exos_new_ws/build/control_exos/CMakeFiles/CMakeOutput.log".
+[0.337s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.365s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '2': /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12

@@ -1,0 +1,20 @@
+[0.023s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.081s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.129s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos
+[0.148s] -- Install configuration: ""
+[0.148s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/package_run_dependencies/control_exos
+[0.148s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/parent_prefix_path/control_exos
+[0.148s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.sh
+[0.149s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.dsv
+[0.149s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.sh
+[0.149s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.dsv
+[0.149s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.bash
+[0.149s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.sh
+[0.149s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.zsh
+[0.149s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.dsv
+[0.149s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.dsv
+[0.150s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/packages/control_exos
+[0.150s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig.cmake
+[0.150s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig-version.cmake
+[0.150s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.xml
+[0.161s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos

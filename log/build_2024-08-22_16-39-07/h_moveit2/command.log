@@ -1,0 +1,6 @@
+Invoking command in '/home/logan/exos_new_ws/build/h_moveit2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/h_moveit2 -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/h_moveit2
+Invoked command in '/home/logan/exos_new_ws/build/h_moveit2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/h_moveit2 -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/h_moveit2
+Invoking command in '/home/logan/exos_new_ws/build/h_moveit2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/h_moveit2 -- -j12 -l12
+Invoked command in '/home/logan/exos_new_ws/build/h_moveit2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/h_moveit2 -- -j12 -l12
+Invoking command in '/home/logan/exos_new_ws/build/h_moveit2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/h_moveit2
+Invoked command in '/home/logan/exos_new_ws/build/h_moveit2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/h_moveit2

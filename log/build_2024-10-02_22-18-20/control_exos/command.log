@@ -1,0 +1,2 @@
+Invoking command in '/home/logan/exos_new_ws/build/control_exos': /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '2': /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12

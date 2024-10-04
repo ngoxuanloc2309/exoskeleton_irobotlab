@@ -1,0 +1,54 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/logan/exos_new_ws/build/loc_dz
+-- Install configuration: ""
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/ament_index/resource_index/package_run_dependencies/loc_dz
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/ament_index/resource_index/parent_prefix_path/loc_dz
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/environment/ament_prefix_path.sh
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/environment/ament_prefix_path.dsv
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/environment/path.sh
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/environment/path.dsv
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/local_setup.bash
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/local_setup.sh
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/local_setup.zsh
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/local_setup.dsv
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/package.dsv
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/ament_index/resource_index/packages/loc_dz
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/cmake/loc_dzConfig.cmake
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/cmake/loc_dzConfig-version.cmake
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/package.xml
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/move_group.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/demo.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/warehouse_db.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/static_virtual_joint_tfs.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/setup_assistant.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/moveit_rviz.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/spawn_controllers.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/launch/rsp.launch.py
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/moveit_controllers.yaml
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/tongquan_sldasm.urdf.xacro
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/moveit.rviz
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/tongquan_sldasm.ros2_control.xacro
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/kinematics.yaml
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/tongquan_sldasm.srdf
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/joint_limits.yaml
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/pilz_cartesian_limits.yaml
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/initial_positions.yaml
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/config/ros2_controllers.yaml
+-- Installing: /home/logan/exos_new_ws/install/loc_dz/share/loc_dz/.setup_assistant

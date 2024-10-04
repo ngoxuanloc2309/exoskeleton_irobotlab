@@ -1,0 +1,42 @@
+[0.019s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/control_exos -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/control_exos
+[0.113s] -- The C compiler identification is GNU 11.4.0
+[0.215s] -- The CXX compiler identification is GNU 11.4.0
+[0.231s] -- Detecting C compiler ABI info
+[0.365s] -- Detecting C compiler ABI info - done
+[0.377s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.377s] -- Detecting C compile features
+[0.378s] -- Detecting C compile features - done
+[0.383s] -- Detecting CXX compiler ABI info
+[0.497s] -- Detecting CXX compiler ABI info - done
+[0.506s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.507s] -- Detecting CXX compile features
+[0.507s] -- Detecting CXX compile features - done
+[0.511s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.773s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.969s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.134s] -- Added test 'lint_cmake' to check CMake code style
+[1.136s] -- Added test 'xmllint' to check XML markup files
+[1.138s] -- Configuring done
+[1.142s] -- Generating done
+[1.143s] -- Build files have been written to: /home/logan/exos_new_ws/build/control_exos
+[1.149s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/control_exos -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/control_exos
+[1.152s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[1.231s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[1.281s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos
+[1.297s] -- Install configuration: ""
+[1.297s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/package_run_dependencies/control_exos
+[1.298s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/parent_prefix_path/control_exos
+[1.298s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.sh
+[1.299s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.dsv
+[1.299s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.sh
+[1.300s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.dsv
+[1.300s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.bash
+[1.300s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.sh
+[1.301s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.zsh
+[1.302s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.dsv
+[1.302s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.dsv
+[1.302s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/packages/control_exos
+[1.303s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig.cmake
+[1.303s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig-version.cmake
+[1.303s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.xml
+[1.306s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos

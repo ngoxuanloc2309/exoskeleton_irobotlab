@@ -1,0 +1,9 @@
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/uninstall.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/tongquan_sldasm_uninstall.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/test.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/edit_cache.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/rebuild_cache.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/list_install_components.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/install.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/install/local.dir
+/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/install/strip.dir

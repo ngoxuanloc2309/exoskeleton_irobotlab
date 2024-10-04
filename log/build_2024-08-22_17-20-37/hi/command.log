@@ -1,0 +1,6 @@
+Invoking command in '/home/logan/exos_new_ws/build/hi': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/hi -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/hi
+Invoked command in '/home/logan/exos_new_ws/build/hi' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/hi -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/hi
+Invoking command in '/home/logan/exos_new_ws/build/hi': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/hi -- -j12 -l12
+Invoked command in '/home/logan/exos_new_ws/build/hi' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/hi -- -j12 -l12
+Invoking command in '/home/logan/exos_new_ws/build/hi': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/hi
+Invoked command in '/home/logan/exos_new_ws/build/hi' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/hi

@@ -1,0 +1,2 @@
+[0.007s] Invoking command in '/home/logan/exos_new_ws/build/chan': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12
+[0.047s] Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12

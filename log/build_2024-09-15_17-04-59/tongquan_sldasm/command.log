@@ -1,0 +1,2 @@
+Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12
+Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '2': /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12

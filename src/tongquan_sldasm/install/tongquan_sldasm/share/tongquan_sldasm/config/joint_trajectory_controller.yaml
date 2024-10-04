@@ -1,0 +1,11 @@
+ros__parameters:
+  chan_trai_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints: [joint_1, joint_2]  # Thêm khoảng trắng sau dấu hai chấm
+  chan_phai_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints: [joint_3, joint_4]  # Thêm khoảng trắng sau dấu hai chấm
+  joint_state_controller:
+    type: "joint_state_controller/JointStateController"
+    publish_rate: 50
+

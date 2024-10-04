@@ -1,0 +1,19 @@
+[31mCMake Error at CMakeLists.txt:4 (find_package):
+  By not providing "Findament_cmakeConfig.cmake.cmake" in CMAKE_MODULE_PATH
+  this project has asked CMake to find a package configuration file provided
+  by "ament_cmakeConfig.cmake", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "ament_cmakeConfig.cmake" with any of the following names:
+
+    ament_cmakeConfig.cmakeConfig.cmake
+    ament_cmakeconfig.cmake-config.cmake
+
+  Add the installation prefix of "ament_cmakeConfig.cmake" to
+  CMAKE_PREFIX_PATH or set "ament_cmakeConfig.cmake_DIR" to a directory
+  containing one of the above files.  If "ament_cmakeConfig.cmake" provides a
+  separate development package or SDK, be sure it has been installed.
+
+[0m
+-- Configuring incomplete, errors occurred!
+See also "/home/logan/exos_new_ws/build/moveit/CMakeFiles/CMakeOutput.log".

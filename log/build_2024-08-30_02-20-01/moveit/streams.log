@@ -1,0 +1,25 @@
+[0.008s] Invoking command in '/home/logan/exos_new_ws/build/moveit': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake /home/logan/exos_new_ws/src/moveit -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/moveit
+[0.031s] [33mCMake Warning at CMakeLists.txt:4 (find_package):
+[0.031s]   By not providing "Findament_cmakeConfig.cmake.cmake" in CMAKE_MODULE_PATH
+[0.031s]   this project has asked CMake to find a package configuration file provided
+[0.031s]   by "ament_cmakeConfig.cmake", but CMake did not find one.
+[0.031s] 
+[0.031s]   Could not find a package configuration file provided by
+[0.031s]   "ament_cmakeConfig.cmake" with any of the following names:
+[0.031s] 
+[0.031s]     ament_cmakeConfig.cmakeConfig.cmake
+[0.031s]     ament_cmakeconfig.cmake-config.cmake
+[0.031s] 
+[0.031s]   Add the installation prefix of "ament_cmakeConfig.cmake" to
+[0.031s]   CMAKE_PREFIX_PATH or set "ament_cmakeConfig.cmake_DIR" to a directory
+[0.031s]   containing one of the above files.  If "ament_cmakeConfig.cmake" provides a
+[0.031s]   separate development package or SDK, be sure it has been installed.
+[0.032s] 
+[0.032s] [0m
+[0.032s] [31mCMake Error at CMakeLists.txt:6 (ament_package):
+[0.032s]   Unknown CMake command "ament_package".
+[0.032s] 
+[0.032s] [0m
+[0.032s] -- Configuring incomplete, errors occurred!
+[0.032s] See also "/home/logan/exos_new_ws/build/moveit/CMakeFiles/CMakeOutput.log".
+[0.033s] Invoked command in '/home/logan/exos_new_ws/build/moveit' returned '1': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake /home/logan/exos_new_ws/src/moveit -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/moveit

@@ -1,0 +1,4 @@
+source;share/tongquan_sldasm/local_setup.bash
+source;share/tongquan_sldasm/local_setup.dsv
+source;share/tongquan_sldasm/local_setup.sh
+source;share/tongquan_sldasm/local_setup.zsh

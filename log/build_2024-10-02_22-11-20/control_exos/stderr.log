@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find
+  "/home/logan/exos_new_ws/src/control_exos/scripts/node_control.py": No such
+  file or directory.
+
+[0m

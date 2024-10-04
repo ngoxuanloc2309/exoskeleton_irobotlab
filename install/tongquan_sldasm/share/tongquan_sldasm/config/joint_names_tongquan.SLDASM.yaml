@@ -1,0 +1,110 @@
+robot_description: 
+  urdf: urdf/tongquan_sldasm.urdf
+
+joints:
+  - name: joint_1
+    type: revolute
+    parent_link: base_link
+    child_link: chan_trai_link
+    origin: 
+      xyz: [-0.3603, 0.647, -0.1735]
+      rpy: [0, 0, 0]
+    axis: [1, 0, 0]
+    limit: 
+      lower: 0
+      upper: 1.07
+
+  - name: joint_2
+    type: revolute
+    parent_link: chan_trai_link
+    child_link: dau_goi_trai_link
+    origin: 
+      xyz: [0.0003, 0.11203, -0.45851]
+      rpy: [0, 0, 0]
+    axis: [-1, 0, 0]
+    limit:
+      lower: 0.35
+      upper: 1.31
+  - name: joint_3
+    type: revolute
+    parent_link: base_link
+    child_link: chan_phai_link
+    origin: 
+      xyz: [0.329, 0.647, -0.1735]
+      rpy: [0, 0, 0]
+    axis: [1, 0, 0]
+    limit:
+      lower: -1.31
+      upper: -0.87
+  - name: joint_4
+    type: revolute
+    parent_link: chan_phai_link
+    child_link: dau_goi_phai_link
+    origin: 
+      xyz: [0.001, 0.11203, -0.45851]
+      rpy: [0, 0, 0]
+    axis: [1, 0, 0]
+    limit:
+      lower: -1.57
+      upper: -0.44
+sensors:
+  - name: base_link
+    type: link
+    frame: base_link
+
+visuals:
+  - name: base_link_visual
+    type: visual
+    parent_link: base_link
+    geometry:
+      type: mesh
+      mesh:
+        filename: urdf/tongquan_sldasm.urdf
+        scale: [1.0, 1.0, 1.0]
+  
+  - name: chan_trai_visual
+    type: visual
+    parent_link: chan_trai_link
+    geometry:
+      type: mesh
+      mesh:
+        filename: urdf/tongquan_sldasm.urdf
+        scale: [1.0, 1.0, 1.0]
+
+  - name: dau_goi_trai_visual
+    type: visual
+    parent_link: dau_goi_trai_link
+    geometry:
+      type: mesh
+      mesh:
+        filename: urdf/tongquan_sldasm.urdf
+        scale: [1.0, 1.0, 1.0]
+
+  - name: chan_phai_visual
+    type: visual
+    parent_link: chan_phai_link
+    geometry:
+      type: mesh
+      mesh:
+        filename: urdf/tongquan_sldasm.urdf
+        scale: [1.0, 1.0, 1.0]
+
+  - name: dau_goi_phai_visual
+    type: visual
+    parent_link: dau_goi_phai_link
+    geometry:
+      type: mesh
+      mesh:
+        filename: urdf/tongquan_sldasm.urdf
+        scale: [1.0, 1.0, 1.0]
+
+controllers:
+  - name: joint_state_controller
+    type: joint_state_controller/JointStateController
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+
+use_sim_time: true

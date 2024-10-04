@@ -1,0 +1,22 @@
+[0.011s] Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/tongquan_sldasm -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/tongquan_sldasm
+[0.024s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.166s] -- Configuring incomplete, errors occurred!
+[0.166s] See also "/home/logan/exos_new_ws/build/tongquan_sldasm/CMakeFiles/CMakeOutput.log".
+[0.166s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.166s]   By not providing "Findroslaunch.cmake" in CMAKE_MODULE_PATH this project
+[0.166s]   has asked CMake to find a package configuration file provided by
+[0.166s]   "roslaunch", but CMake did not find one.
+[0.167s] 
+[0.167s]   Could not find a package configuration file provided by "roslaunch" with
+[0.167s]   any of the following names:
+[0.167s] 
+[0.167s]     roslaunchConfig.cmake
+[0.167s]     roslaunch-config.cmake
+[0.167s] 
+[0.167s]   Add the installation prefix of "roslaunch" to CMAKE_PREFIX_PATH or set
+[0.167s]   "roslaunch_DIR" to a directory containing one of the above files.  If
+[0.167s]   "roslaunch" provides a separate development package or SDK, be sure it has
+[0.167s]   been installed.
+[0.167s] 
+[0.167s] [0m
+[0.169s] Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/tongquan_sldasm -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/tongquan_sldasm
