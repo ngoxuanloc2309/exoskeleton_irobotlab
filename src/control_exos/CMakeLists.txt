@@ -12,6 +12,8 @@ find_package(builtin_interfaces REQUIRED)
 install(
   PROGRAMS src/node_control.py
   PROGRAMS src/push_angle.py
+  PROGRAMS src/node_control_true.py
+  PROGRAMS src/contact_mc.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

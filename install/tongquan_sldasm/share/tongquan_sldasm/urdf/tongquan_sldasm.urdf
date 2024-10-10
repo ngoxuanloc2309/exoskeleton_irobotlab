@@ -95,8 +95,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="0"
-      upper="0.93"
+      lower="-0.93"
+      upper="0"
       effort="10"
       velocity="0.2" />
   </joint>
@@ -153,8 +153,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-0.93"
-      upper="0"
+      lower="0"
+      upper="0.93"
       effort="10"
       velocity="0.2" />
   </joint>
@@ -211,8 +211,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="0"
-      upper="0.93"
+      lower="-0.93"
+      upper="0"
       effort="10"
       velocity="0.2" />
   </joint>
@@ -269,8 +269,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-0.93"
-      upper="0"
+      lower="0"
+      upper="0.93"
       effort="10"
       velocity="0.2" />
   </joint>
@@ -361,7 +361,7 @@
     <!-- <parameters>$(find tongquan_sldasm)/config/ros2_controllers.yaml</parameters> -->
 
   <!--  <parameters>/home/logan/exos_new_ws/src/tongquan_sldasm/config/ros2_controllers.yaml</parameters> -->
-    <parameters>/home/logan/exos_new_ws/src/tongquan_sldasm/config/ros2_controllers.yaml</parameters>   
+    <parameters>/home/logan/exos_new_ws/src/moveit_true/config/ros2_controllers.yaml</parameters>   
     <!-- <robotSimType>gazebo_ros2_control/DefaultRobotHWSim</robotSimType> -->
   </plugin>
  </gazebo>

@@ -1,5 +1,7 @@
 /home/logan/exos_new_ws/install/control_exos/lib/control_exos/node_control.py
 /home/logan/exos_new_ws/install/control_exos/lib/control_exos/push_angle.py
+/home/logan/exos_new_ws/install/control_exos/lib/control_exos/node_control_true.py
+/home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact_mc.py
 /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/package_run_dependencies/control_exos
 /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/parent_prefix_path/control_exos
 /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.sh

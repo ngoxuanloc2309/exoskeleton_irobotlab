@@ -46,6 +46,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/control_exos" TYPE PROGRAM FILES
     "/home/logan/exos_new_ws/src/control_exos/src/node_control.py"
     "/home/logan/exos_new_ws/src/control_exos/src/push_angle.py"
+    "/home/logan/exos_new_ws/src/control_exos/src/node_control_true.py"
+    "/home/logan/exos_new_ws/src/control_exos/src/contact_mc.py"
     )
 endif()
 

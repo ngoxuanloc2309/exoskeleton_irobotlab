@@ -3,6 +3,7 @@
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config/ros2_controllers_1.yaml
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config/ros2_controllers.yaml
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/display.launch.py
+/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/synch2.launch.py
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/synch_gazebo_moveit.launch.py
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/gazebo.launch.py
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/test2.launch.py
@@ -14,6 +15,7 @@
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_trai_link.STL
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_phai_link.STL
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/base_link.STL
+/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/nhap.urdf
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/tongquan_sldasm.urdf
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/tongquan_sldasm.csv
 /home/logan/exos_new_ws/install/tongquan_sldasm/share/ament_index/resource_index/package_run_dependencies/tongquan_sldasm
