@@ -1,8 +1,4 @@
-source;share/tongquan_sldasm/hook/cmake_prefix_path.ps1
-source;share/tongquan_sldasm/hook/cmake_prefix_path.dsv
-source;share/tongquan_sldasm/hook/cmake_prefix_path.sh
 source;share/tongquan_sldasm/local_setup.bash
 source;share/tongquan_sldasm/local_setup.dsv
-source;share/tongquan_sldasm/local_setup.ps1
 source;share/tongquan_sldasm/local_setup.sh
 source;share/tongquan_sldasm/local_setup.zsh

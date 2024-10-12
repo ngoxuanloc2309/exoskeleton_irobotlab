@@ -1,4 +1,0 @@
-Invoking command in '/home/logan/exoskeleton_irobotlab/build/tongquan_sldasm': /usr/bin/cmake --build /home/logan/exoskeleton_irobotlab/build/tongquan_sldasm -- -j12 -l12
-Invoked command in '/home/logan/exoskeleton_irobotlab/build/tongquan_sldasm' returned '0': /usr/bin/cmake --build /home/logan/exoskeleton_irobotlab/build/tongquan_sldasm -- -j12 -l12
-Invoking command in '/home/logan/exoskeleton_irobotlab/build/tongquan_sldasm': /usr/bin/cmake --install /home/logan/exoskeleton_irobotlab/build/tongquan_sldasm
-Invoked command in '/home/logan/exoskeleton_irobotlab/build/tongquan_sldasm' returned '0': /usr/bin/cmake --install /home/logan/exoskeleton_irobotlab/build/tongquan_sldasm
