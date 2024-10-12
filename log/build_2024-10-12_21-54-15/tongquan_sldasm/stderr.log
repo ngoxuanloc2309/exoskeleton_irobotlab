@@ -1,0 +1,1 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/logan/exoskeleton_irobotlab/build/tongquan_sldasm/CMakeCache.txt is different than the directory /home/logan/exos_new_ws/build/tongquan_sldasm where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m

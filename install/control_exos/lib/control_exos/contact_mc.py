@@ -13,10 +13,10 @@ class SerialController(Node):
         super().__init__('serial_controller')
         
         # Thông số cố định cho tính toán góc
-        self.x1 = 0.39  # meters
-        self.x2 = 0.41  # meters
-        self.x3 = 0.39  # meters
-        self.x4 = 0.41  # meters
+        self.x1 = 0.41  # meters
+        self.x2 = 0.39  # meters
+        self.x3 = 0.41  # meters
+        self.x4 = 0.39  # meters
         
         # Tự động tìm cổng Serial với nhiều lần thử
         self.ser = None

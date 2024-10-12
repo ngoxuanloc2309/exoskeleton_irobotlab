@@ -10,10 +10,13 @@ find_package(builtin_interfaces REQUIRED)
 
 # Install Python files
 install(
-  PROGRAMS src/node_control.py
+  PROGRAMS src/hi.py
   PROGRAMS src/push_angle.py
   PROGRAMS src/node_control_true.py
   PROGRAMS src/contact_mc.py
+  PROGRAMS src/serial_monitor.py
+  PROGRAMS src/check_contact.py
+  PROGRAMS src/check_data_ros.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

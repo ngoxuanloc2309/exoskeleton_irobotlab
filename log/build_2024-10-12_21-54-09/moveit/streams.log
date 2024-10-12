@@ -1,0 +1,43 @@
+[0.021s] Invoking command in '/home/logan/exoskeleton_irobotlab/build/moveit': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exoskeleton_irobotlab/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exoskeleton_irobotlab/build/moveit -- -j12 -l12
+[0.034s] [0mCMake Error: The current CMakeCache.txt directory /home/logan/exoskeleton_irobotlab/build/moveit/CMakeCache.txt is different than the directory /home/logan/exos_new_ws/build/moveit where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.083s] Invoked command in '/home/logan/exoskeleton_irobotlab/build/moveit' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exoskeleton_irobotlab/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exoskeleton_irobotlab/build/moveit -- -j12 -l12
+[0.113s] Invoking command in '/home/logan/exoskeleton_irobotlab/build/moveit': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exoskeleton_irobotlab/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exoskeleton_irobotlab/build/moveit
+[0.129s] -- Install configuration: ""
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/package_run_dependencies/moveit
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/parent_prefix_path/moveit
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/ament_prefix_path.sh
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/ament_prefix_path.dsv
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/path.sh
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/path.dsv
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.bash
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.sh
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.zsh
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.dsv
+[0.129s] -- Installing: /home/logan/exos_new_ws/install/moveit/share/moveit/package.dsv
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/packages/moveit
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/cmake/moveitConfig.cmake
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/cmake/moveitConfig-version.cmake
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/package.xml
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/simple_moveit.launch.py
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/move_group.launch.py
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/demo.launch.py
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/warehouse_db.launch.py
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/static_virtual_joint_tfs.launch.py
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/setup_assistant.launch.py
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/moveit_rviz.launch.py
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/spawn_controllers.launch.py
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/rsp.launch.py
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/moveit_controllers.yaml
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.urdf.xacro
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/moveit.rviz
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.ros2_control.xacro
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/kinematics.yaml
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.srdf
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/joint_limits.yaml
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/pilz_cartesian_limits.yaml
+[0.132s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/initial_positions.yaml
+[0.132s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/config/ros2_controllers.yaml
+[0.132s] -- Up-to-date: /home/logan/exos_new_ws/install/moveit/share/moveit/.setup_assistant
+[0.148s] Invoked command in '/home/logan/exoskeleton_irobotlab/build/moveit' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exoskeleton_irobotlab/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exoskeleton_irobotlab/build/moveit
