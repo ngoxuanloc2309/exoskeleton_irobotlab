@@ -1,4 +1,8 @@
+source;share/chan/hook/cmake_prefix_path.ps1
+source;share/chan/hook/cmake_prefix_path.dsv
+source;share/chan/hook/cmake_prefix_path.sh
 source;share/chan/local_setup.bash
 source;share/chan/local_setup.dsv
+source;share/chan/local_setup.ps1
 source;share/chan/local_setup.sh
 source;share/chan/local_setup.zsh

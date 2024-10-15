@@ -47,7 +47,7 @@ class SerialController(Node):
             self.get_logger().error('Đã vượt quá số lần thử kết nối Serial')
             return
 
-        ports = glob.glob('/dev/ttyUSB*') + glob.glob('/dev/ttyACM*')
+        ports = glob.glob('/dev/ttyUSB*') # + glob.glob('/dev/ttyACM*')
         
         if not ports:
             self.get_logger().error('Không tìm thấy cổng Serial nào')
@@ -120,13 +120,12 @@ class SerialController(Node):
                 joint2_deg = math.degrees(msg.position[joint2_idx])
                 joint4_deg = math.degrees(msg.position[joint4_idx])
                 
+                self.get_logger().info(f'Nhận được góc: joint2 = {joint2_deg:.2f}, joint4 = {joint4_deg:.2f}')
+                
                 # Tính toán các góc B, C, B', C'
                 angles = self.calculate_angles(joint2_deg, joint4_deg)
                 
-                # Log kết quả
-                self.get_logger().info(
-                    f'Góc [B, C, B\', C\']: {[f"{angle:.2f}" for angle in angles]}'
-                )
+                self.get_logger().info(f'Góc tính toán: B = {angles[0]:.2f}, C = {angles[1]:.2f}, B\' = {angles[2]:.2f}, C\' = {angles[3]:.2f}')
                 
                 # Tạo control data
                 control_data = np.zeros(7, dtype=np.uint8)
@@ -142,7 +141,14 @@ class SerialController(Node):
                 # Gửi dữ liệu qua Serial
                 if self.ser and self.ser.is_open:
                     self.ser.write(bytes(control_data))
-                    self.get_logger().debug(f'Đã gửi dữ liệu: {control_data}')
+                    self.get_logger().info(f'Đã gửi dữ liệu: {control_data}')
+                    
+                    # Thêm đoạn code để đọc phản hồi từ STM32 (nếu có)
+                    response = self.ser.read(1)
+                    if response:
+                        self.get_logger().info(f'Nhận được phản hồi từ STM32: {response}')
+                    else:
+                        self.get_logger().warn('Không nhận được phản hồi từ STM32')
                 else:
                     self.get_logger().warn('Cổng Serial không khả dụng, thử kết nối lại...')
                     self.find_and_connect_serial()
@@ -169,4 +175,4 @@ def main(args=None):
         rclpy.shutdown()
 
 if __name__ == '__main__':
-    main()    
+    main()
