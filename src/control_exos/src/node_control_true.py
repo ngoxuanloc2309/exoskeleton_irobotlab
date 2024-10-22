@@ -19,7 +19,7 @@ class WalkingControlNode(Node):
         self.chan_trai_client = ActionClient(self, FollowJointTrajectory, '/chan_trai_group_controller/follow_joint_trajectory')
         self.chan_phai_client = ActionClient(self, FollowJointTrajectory, '/chan_phai_group_controller/follow_joint_trajectory')
         
-        self.declare_parameter('movement_duration', 3.75)  # Thoi gian mac dinh la 2 giay ^^
+        self.declare_parameter('movement_duration', 3)  # Thoi gian mac dinh la 2 giay ^^
         self.movement_duration = self.get_parameter('movement_duration').value
         
         self.timer = self.create_timer(0.1, self.control_loop)
@@ -36,17 +36,17 @@ class WalkingControlNode(Node):
             self.state = 'returning'
         elif self.state == 'returning' and self.trai_done and self.phai_done:
             self.state = 'start'
-        
+       
         self.trai_done = False
         self.phai_done = False
 
     def move_legs(self, movement_type):
         if movement_type == 'up_down':
-            self.move_leg('chan_trai', [-0.93, 0.93])  # Chân trái lên cao
+            self.move_leg('chan_trai', [-0.73, 0.73])  # Chân trái lên cao
             self.move_leg('chan_phai', [0.0, 0.0])    # Chân phải xuống thấp
         elif movement_type == 'down_up':
             self.move_leg('chan_trai', [0.0, 0.0])    # Chân trái xuống thấp
-            self.move_leg('chan_phai', [-0.93, 0.93])  # Chân phải lên cao
+            self.move_leg('chan_phai', [-0.73, 0.73])  # Chân phải lên cao
 
     def move_leg(self, leg_name, positions):
         client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client

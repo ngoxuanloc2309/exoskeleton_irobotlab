@@ -1,0 +1,47 @@
+[0.037s] Invoking command in '/home/logan/exos_new_ws/build/chan': CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/home/logan/exos_new_ws/install/moveit_true:/home/logan/exos_new_ws/install/moveit_2:/home/logan/exos_new_ws/install/moveit:/home/logan/exos_new_ws/install/chan:/home/logan/exos_new_ws/install/control_exos:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/chan -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/chan
+[0.059s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.313s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.429s] -- Configuring done
+[0.440s] -- Generating done
+[0.441s] -- Build files have been written to: /home/logan/exos_new_ws/build/chan
+[0.447s] Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/home/logan/exos_new_ws/install/moveit_true:/home/logan/exos_new_ws/install/moveit_2:/home/logan/exos_new_ws/install/moveit:/home/logan/exos_new_ws/install/chan:/home/logan/exos_new_ws/install/control_exos:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/chan -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/chan
+[0.449s] Invoking command in '/home/logan/exos_new_ws/build/chan': CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/home/logan/exos_new_ws/install/moveit_true:/home/logan/exos_new_ws/install/moveit_2:/home/logan/exos_new_ws/install/moveit:/home/logan/exos_new_ws/install/chan:/home/logan/exos_new_ws/install/control_exos:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12
+[0.516s] Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/home/logan/exos_new_ws/install/moveit_true:/home/logan/exos_new_ws/install/moveit_2:/home/logan/exos_new_ws/install/moveit:/home/logan/exos_new_ws/install/chan:/home/logan/exos_new_ws/install/control_exos:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12
+[0.552s] Invoking command in '/home/logan/exos_new_ws/build/chan': CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/home/logan/exos_new_ws/install/moveit_true:/home/logan/exos_new_ws/install/moveit_2:/home/logan/exos_new_ws/install/moveit:/home/logan/exos_new_ws/install/chan:/home/logan/exos_new_ws/install/control_exos:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/chan
+[0.562s] -- Install configuration: ""
+[0.563s] -- Execute custom install script
+[0.563s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/ament_index/resource_index/package_run_dependencies/chan
+[0.576s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/ament_index/resource_index/parent_prefix_path/chan
+[0.589s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/environment/ament_prefix_path.sh
+[0.602s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/environment/ament_prefix_path.dsv
+[0.615s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/environment/path.sh
+[0.628s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/environment/path.dsv
+[0.641s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.bash
+[0.655s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.sh
+[0.669s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.zsh
+[0.683s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.dsv
+[0.696s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/package.dsv
+[0.712s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/ament_index/resource_index/packages/chan
+[0.727s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/cmake/chanConfig.cmake
+[0.739s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/cmake/chanConfig-version.cmake
+[0.754s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/package.xml
+[0.769s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/demo.launch.py
+[0.792s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/move_group.launch.py
+[0.805s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/moveit_rviz.launch.py
+[0.817s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/rsp.launch.py
+[0.838s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/setup_assistant.launch.py
+[0.853s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/spawn_controllers.launch.py
+[0.867s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/static_virtual_joint_tfs.launch.py
+[0.880s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/launch/warehouse_db.launch.py
+[0.894s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/initial_positions.yaml
+[0.907s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/joint_limits.yaml
+[0.921s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/kinematics.yaml
+[0.934s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/moveit.rviz
+[0.947s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/moveit_controllers.yaml
+[0.961s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/pilz_cartesian_limits.yaml
+[0.975s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/ros2_controllers.yaml
+[0.989s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/tongquan_sldasm.ros2_control.xacro
+[1.012s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/tongquan_sldasm.srdf
+[1.033s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/config/tongquan_sldasm.urdf.xacro
+[1.048s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/.setup_assistant
+[1.066s] Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/home/logan/exos_new_ws/install/moveit_true:/home/logan/exos_new_ws/install/moveit_2:/home/logan/exos_new_ws/install/moveit:/home/logan/exos_new_ws/install/chan:/home/logan/exos_new_ws/install/control_exos:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/chan

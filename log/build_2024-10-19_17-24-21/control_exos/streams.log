@@ -1,0 +1,33 @@
+[0.016s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.070s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.115s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos
+[0.126s] -- Install configuration: ""
+[0.126s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/hi.py
+[0.127s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/push_angle.py
+[0.127s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/node_control_true.py
+[0.127s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact_mc.py
+[0.127s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/serial_monitor.py
+[0.127s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_contact.py
+[0.127s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_data_ros.py
+[0.127s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact.py
+[0.128s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/receive.py
+[0.128s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/chinhsua.py
+[0.128s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/gioi_han.py
+[0.128s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/donghoc.py
+[0.128s] -- Installing: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/receive1.py
+[0.128s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/package_run_dependencies/control_exos
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/parent_prefix_path/control_exos
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.sh
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.dsv
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.sh
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.dsv
+[0.129s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.bash
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.sh
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.zsh
+[0.130s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.dsv
+[0.131s] -- Installing: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.dsv
+[0.131s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/packages/control_exos
+[0.132s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig.cmake
+[0.132s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig-version.cmake
+[0.133s] -- Up-to-date: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.xml
+[0.140s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos

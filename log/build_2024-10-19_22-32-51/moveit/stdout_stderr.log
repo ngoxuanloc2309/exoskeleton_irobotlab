@@ -1,0 +1,42 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/logan/exos_new_ws/build/moveit
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/package_run_dependencies/moveit
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/parent_prefix_path/moveit
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/ament_prefix_path.sh
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/ament_prefix_path.dsv
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/path.sh
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/path.dsv
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.bash
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.sh
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.zsh
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.dsv
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/package.dsv
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/packages/moveit
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/cmake/moveitConfig.cmake
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/cmake/moveitConfig-version.cmake
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/package.xml
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/demo.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/move_group.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/moveit_rviz.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/rsp.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/setup_assistant.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/simple_moveit.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/spawn_controllers.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/static_virtual_joint_tfs.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/warehouse_db.launch.py
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/initial_positions.yaml
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/joint_limits.yaml
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/kinematics.yaml
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/moveit.rviz
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/moveit_controllers.yaml
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/pilz_cartesian_limits.yaml
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/ros2_controllers.yaml
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.ros2_control.xacro
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.srdf
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.urdf.xacro
+-- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/.setup_assistant

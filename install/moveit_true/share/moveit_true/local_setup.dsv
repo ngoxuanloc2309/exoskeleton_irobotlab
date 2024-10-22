@@ -1,2 +1,1 @@
-source;share/moveit_true/environment/ament_prefix_path.sh
-source;share/moveit_true/environment/path.sh
+/home/logan/exos_new_ws/build/moveit_true/ament_cmake_environment_hooks/local_setup.dsv

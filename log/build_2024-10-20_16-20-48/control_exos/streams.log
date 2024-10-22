@@ -1,0 +1,23 @@
+[0.022s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.108s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.163s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos
+[0.173s] -- Install configuration: ""
+[0.174s] -- Execute custom install script
+[0.174s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/hi.py
+[0.174s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/plot.py
+[0.174s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/node_control_true.py
+[0.175s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact_mc.py
+[0.175s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/serial_monitor.py
+[0.175s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_contact.py
+[0.175s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_data_ros.py
+[0.176s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact.py
+[0.176s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/receive.py
+[0.176s] [31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:204 (message):
+[0.176s]   ament_cmake_symlink_install_programs() can't find
+[0.176s]   '/home/logan/exos_new_ws/src/control_exos/src/chinhsua.py'
+[0.176s] Call Stack (most recent call first):
+[0.177s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_programs)
+[0.177s]   cmake_install.cmake:46 (include)
+[0.177s] 
+[0.177s] [0m
+[0.179s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos

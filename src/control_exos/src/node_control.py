@@ -42,11 +42,11 @@ class WalkingControlNode(Node):
 
     def move_legs(self, movement_type):
         if movement_type == 'up_down':
-            self.move_leg('chan_trai', [0.93, -0.93])  # Chân trái lên cao
+            self.move_leg('chan_trai', [0.60, -0.60])  # Chân trái lên cao
             self.move_leg('chan_phai', [0.0, 0.0])    # Chân phải xuống thấp
         elif movement_type == 'down_up':
             self.move_leg('chan_trai', [0.0, 0.0])    # Chân trái xuống thấp
-            self.move_leg('chan_phai', [0.93, -0.93])  # Chân phải lên cao
+            self.move_leg('chan_phai', [0.60, -0.60])  # Chân phải lên cao
 
     def move_leg(self, leg_name, positions):
         client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client

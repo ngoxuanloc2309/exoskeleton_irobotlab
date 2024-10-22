@@ -1,0 +1,45 @@
+[0.024s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.067s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.322s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.342s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[0.342s] -- Found control_msgs: 4.6.0 (/opt/ros/humble/share/control_msgs/cmake)
+[0.387s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.391s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.403s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.418s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.439s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.758s] -- Configuring done
+[0.764s] -- Generating done
+[0.766s] -- Build files have been written to: /home/logan/exos_new_ws/build/control_exos
+[0.816s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[0.871s] Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos
+[0.881s] -- Install configuration: ""
+[0.882s] -- Execute custom install script
+[0.882s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/hi.py
+[0.882s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/plot.py
+[0.882s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/node_control_true.py
+[0.882s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact_mc.py
+[0.883s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/serial_monitor.py
+[0.883s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_contact.py
+[0.883s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_data_ros.py
+[0.883s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact.py
+[0.883s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/donghoc.py
+[0.883s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/mathplot.py
+[0.883s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/control_angle.py
+[0.884s] -- Symlinking: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/thaythe.py
+[0.896s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/package_run_dependencies/control_exos
+[0.896s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/parent_prefix_path/control_exos
+[0.896s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.sh
+[0.896s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/ament_prefix_path.dsv
+[0.896s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.sh
+[0.897s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/environment/path.dsv
+[0.897s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.bash
+[0.897s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.sh
+[0.897s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.zsh
+[0.897s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/local_setup.dsv
+[0.897s] -- Symlinking: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.dsv
+[0.910s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/ament_index/resource_index/packages/control_exos
+[0.910s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig.cmake
+[0.910s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/cmake/control_exosConfig-version.cmake
+[0.910s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/share/control_exos/package.xml
+[0.914s] Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos

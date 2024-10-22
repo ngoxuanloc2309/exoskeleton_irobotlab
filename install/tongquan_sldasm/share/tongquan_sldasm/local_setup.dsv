@@ -1,2 +1,1 @@
-source;share/tongquan_sldasm/environment/ament_prefix_path.sh
-source;share/tongquan_sldasm/environment/path.sh
+/home/logan/exos_new_ws/build/tongquan_sldasm/ament_cmake_environment_hooks/local_setup.dsv

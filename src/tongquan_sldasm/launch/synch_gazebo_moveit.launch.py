@@ -34,18 +34,18 @@ def load_yaml(package_name, file_path):
 def generate_launch_description():
     # Đường dẫn package
     pkg_share = get_package_share_directory('tongquan_sldasm')
-    moveit_config_path = get_package_share_directory('moveit')
+    moveit_config_path = get_package_share_directory('moveit_true')
 
     # Các file cấu hình
     urdf_path = os.path.join(pkg_share, 'urdf', 'tongquan_sldasm.urdf')
     srdf_path = os.path.join(moveit_config_path, 'config', 'tongquan_sldasm.srdf')
     ros2_controllers_yaml = os.path.join(moveit_config_path, 'config', 'ros2_controllers.yaml')
     moveit_controllers_yaml = os.path.join(moveit_config_path, 'config', 'moveit_controllers.yaml')
-    kinematics_yaml = load_yaml("moveit", "config/kinematics.yaml")
+    kinematics_yaml = load_yaml("moveit_true", "config/kinematics.yaml")
 
     # Đọc URDF và SRDF
     robot_description = load_file("tongquan_sldasm", "urdf/tongquan_sldasm.urdf")
-    robot_description_semantic = load_file("moveit", "config/tongquan_sldasm.srdf")
+    robot_description_semantic = load_file("moveit_true", "config/tongquan_sldasm.srdf")
 
     robot_description_kinematics = {"robot_description_kinematics": kinematics_yaml}
 
@@ -59,7 +59,7 @@ def generate_launch_description():
     }
 
     # Cấu hình controllers
-    moveit_controllers = load_yaml("moveit", "config/moveit_controllers.yaml")
+    moveit_controllers = load_yaml("moveit_true", "config/moveit_controllers.yaml")
     
     # Các tham số khác
     use_sim_time = {'use_sim_time': True}
@@ -100,7 +100,7 @@ def generate_launch_description():
     chan_trai_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['chan_trai_controller', '--controller-manager', '/controller_manager',],#'--ros-args', '--log-level', 'debug',],
+        arguments=['chan_trai_group_controller', '--controller-manager', '/controller_manager',],#'--ros-args', '--log-level', 'debug',],
         parameters=[ros2_controllers_yaml, use_sim_time],
         output='screen'
     )
@@ -108,11 +108,19 @@ def generate_launch_description():
     chan_phai_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['chan_phai_controller', '--controller-manager', '/controller_manager',],#'--ros-args', '--log-level', 'debug',],
+        arguments=['chan_phai_group_controller', '--controller-manager', '/controller_manager',],#'--ros-args', '--log-level', 'debug',],
         parameters=[ros2_controllers_yaml, use_sim_time],
         output='screen'
     )
+    #########
+    receive_data_node = Node(
+        package = "control_exos",
+        executable='control_angle.py',
+        name='exos',
+        output='screen',
+    )
 
+    #########
     # Node MoveIt
     run_move_group_node = Node(
         package="moveit_ros_move_group",
@@ -130,7 +138,7 @@ def generate_launch_description():
     )
 
     # Node Rviz
-    rviz_config_file = os.path.join(get_package_share_directory("moveit"), "config", "moveit.rviz")
+    rviz_config_file = os.path.join(get_package_share_directory("moveit_true"), "config", "moveit.rviz")
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
@@ -192,6 +200,12 @@ def generate_launch_description():
             event_handler=OnProcessExit(
                 target_action=chan_phai_controller_spawner,
                 on_exit=[run_move_group_node, rviz_node]
+            )
+        ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=rviz_node,
+                on_exit=[receive_data_node],
             )
         ),
     ])

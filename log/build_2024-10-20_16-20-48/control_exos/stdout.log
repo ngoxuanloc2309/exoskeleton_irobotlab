@@ -1,0 +1,11 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/hi.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/plot.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/node_control_true.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact_mc.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/serial_monitor.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_contact.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/check_data_ros.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/contact.py
+-- Up-to-date symlink: /home/logan/exos_new_ws/install/control_exos/lib/control_exos/receive.py

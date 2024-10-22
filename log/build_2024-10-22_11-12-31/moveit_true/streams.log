@@ -1,0 +1,40 @@
+[0.024s] Invoking command in '/home/logan/exos_new_ws/build/moveit_true': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit_true -- -j12 -l12
+[0.083s] Invoked command in '/home/logan/exos_new_ws/build/moveit_true' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit_true -- -j12 -l12
+[0.114s] Invoking command in '/home/logan/exos_new_ws/build/moveit_true': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit_true
+[0.126s] -- Install configuration: ""
+[0.127s] -- Execute custom install script
+[0.128s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/ament_index/resource_index/package_run_dependencies/moveit_true
+[0.128s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/ament_index/resource_index/parent_prefix_path/moveit_true
+[0.128s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/environment/ament_prefix_path.sh
+[0.128s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/environment/ament_prefix_path.dsv
+[0.129s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/environment/path.sh
+[0.129s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/environment/path.dsv
+[0.129s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/local_setup.bash
+[0.129s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/local_setup.sh
+[0.129s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/local_setup.zsh
+[0.129s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/local_setup.dsv
+[0.130s] -- Symlinking: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.dsv
+[0.144s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/ament_index/resource_index/packages/moveit_true
+[0.144s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/cmake/moveit_trueConfig.cmake
+[0.144s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/cmake/moveit_trueConfig-version.cmake
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.xml
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/demo.launch.py
+[0.146s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/move_group.launch.py
+[0.148s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/moveit_rviz.launch.py
+[0.148s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/rsp.launch.py
+[0.148s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/setup_assistant.launch.py
+[0.148s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/spawn_controllers.launch.py
+[0.149s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/static_virtual_joint_tfs.launch.py
+[0.149s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/launch/warehouse_db.launch.py
+[0.149s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/initial_positions.yaml
+[0.149s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/joint_limits.yaml
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/kinematics.yaml
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/moveit.rviz
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/moveit_controllers.yaml
+[0.151s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/pilz_cartesian_limits.yaml
+[0.152s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/ros2_controllers.yaml
+[0.152s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/tongquan_sldasm.ros2_control.xacro
+[0.152s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/tongquan_sldasm.srdf
+[0.152s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/config/tongquan_sldasm.urdf.xacro
+[0.152s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit_true/share/moveit_true/.setup_assistant
+[0.165s] Invoked command in '/home/logan/exos_new_ws/build/moveit_true' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit_true

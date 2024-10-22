@@ -11,12 +11,19 @@ find_package(builtin_interfaces REQUIRED)
 # Install Python files
 install(
   PROGRAMS src/hi.py
-  PROGRAMS src/push_angle.py
+  PROGRAMS src/plot.py
   PROGRAMS src/node_control_true.py
   PROGRAMS src/contact_mc.py
   PROGRAMS src/serial_monitor.py
   PROGRAMS src/check_contact.py
   PROGRAMS src/check_data_ros.py
+  PROGRAMS src/contact.py
+  PROGRAMS src/donghoc.py
+  PROGRAMS src/mathplot.py
+  PROGRAMS src/control_angle.py
+  PROGRAMS src/thaythe.py
+  PROGRAMS src/receive_control.py
+
   DESTINATION lib/${PROJECT_NAME}
 )
 

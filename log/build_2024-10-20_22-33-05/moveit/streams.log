@@ -1,0 +1,41 @@
+[0.013s] Invoking command in '/home/logan/exos_new_ws/build/moveit': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit -- -j12 -l12
+[0.075s] Invoked command in '/home/logan/exos_new_ws/build/moveit' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit -- -j12 -l12
+[0.105s] Invoking command in '/home/logan/exos_new_ws/build/moveit': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit
+[0.118s] -- Install configuration: ""
+[0.120s] -- Execute custom install script
+[0.121s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/package_run_dependencies/moveit
+[0.122s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/parent_prefix_path/moveit
+[0.122s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/ament_prefix_path.sh
+[0.122s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/ament_prefix_path.dsv
+[0.123s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/path.sh
+[0.123s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/environment/path.dsv
+[0.124s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.bash
+[0.124s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.sh
+[0.124s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.zsh
+[0.125s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/local_setup.dsv
+[0.125s] -- Symlinking: /home/logan/exos_new_ws/install/moveit/share/moveit/package.dsv
+[0.142s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/ament_index/resource_index/packages/moveit
+[0.143s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/cmake/moveitConfig.cmake
+[0.143s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/cmake/moveitConfig-version.cmake
+[0.143s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/package.xml
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/demo.launch.py
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/move_group.launch.py
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/moveit_rviz.launch.py
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/rsp.launch.py
+[0.146s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/setup_assistant.launch.py
+[0.146s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/simple_moveit.launch.py
+[0.146s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/spawn_controllers.launch.py
+[0.146s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/static_virtual_joint_tfs.launch.py
+[0.147s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/launch/warehouse_db.launch.py
+[0.149s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/initial_positions.yaml
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/joint_limits.yaml
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/kinematics.yaml
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/moveit.rviz
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/moveit_controllers.yaml
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/pilz_cartesian_limits.yaml
+[0.150s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/ros2_controllers.yaml
+[0.151s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.ros2_control.xacro
+[0.151s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.srdf
+[0.151s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/config/tongquan_sldasm.urdf.xacro
+[0.151s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/moveit/share/moveit/.setup_assistant
+[0.161s] Invoked command in '/home/logan/exos_new_ws/build/moveit' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit

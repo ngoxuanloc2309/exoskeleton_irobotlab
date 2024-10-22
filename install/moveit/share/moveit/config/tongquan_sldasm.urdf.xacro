@@ -1,14 +1,1 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="tongquan_sldasm">
-    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
-
-    <!-- Import tongquan_sldasm urdf file -->
-    <xacro:include filename="$(find tongquan_sldasm)/urdf/tongquan_sldasm.urdf" />
-
-    <!-- Import control_xacro -->
-    <xacro:include filename="tongquan_sldasm.ros2_control.xacro" />
-
-
-    <xacro:tongquan_sldasm_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
-
-</robot>
+/home/logan/exos_new_ws/src/moveit/config/tongquan_sldasm.urdf.xacro

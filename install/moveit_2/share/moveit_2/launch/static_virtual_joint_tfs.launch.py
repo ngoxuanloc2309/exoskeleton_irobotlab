@@ -1,7 +1,1 @@
-from moveit_configs_utils import MoveItConfigsBuilder
-from moveit_configs_utils.launches import generate_static_virtual_joint_tfs_launch
-
-
-def generate_launch_description():
-    moveit_config = MoveItConfigsBuilder("tongquan_sldasm", package_name="moveit_2").to_moveit_configs()
-    return generate_static_virtual_joint_tfs_launch(moveit_config)
+/home/logan/exos_new_ws/src/moveit_2/launch/static_virtual_joint_tfs.launch.py

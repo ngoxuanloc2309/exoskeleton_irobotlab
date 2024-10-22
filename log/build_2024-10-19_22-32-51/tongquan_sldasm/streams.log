@@ -1,0 +1,53 @@
+[0.020s] Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/tongquan_sldasm -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/tongquan_sldasm
+[0.042s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.280s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.297s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.474s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.478s] -- Added test 'lint_cmake' to check CMake code style
+[0.480s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.496s] -- Added test 'xmllint' to check XML markup files
+[0.499s] -- Configuring done
+[0.508s] -- Generating done
+[0.511s] -- Build files have been written to: /home/logan/exos_new_ws/build/tongquan_sldasm
+[0.517s] Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/logan/exos_new_ws/src/tongquan_sldasm -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/logan/exos_new_ws/install/tongquan_sldasm
+[0.520s] Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12
+[0.603s] Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12
+[0.654s] Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/tongquan_sldasm
+[0.665s] -- Install configuration: ""
+[0.666s] -- Execute custom install script
+[0.666s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config/joint_names_tongquan.SLDASM.yaml
+[0.681s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config/joint_trajectory_controller.yaml
+[0.695s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config/ros2_controllers.yaml
+[0.708s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/config/ros2_controllers_1.yaml
+[0.721s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/display.launch.py
+[0.734s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/gazebo.launch.py
+[0.748s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/luutru.txt
+[0.762s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/met.launch.py
+[0.774s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/push_angle.launch.py
+[0.787s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/synch2.launch.py
+[0.801s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/synch_gazebo_moveit.launch.py
+[0.814s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/launch/test2.launch.py
+[0.834s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/base_link.STL
+[0.856s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_phai_link.STL
+[0.876s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/chan_trai_link.STL
+[0.896s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_phai_link.STL
+[0.910s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/meshes/dau_goi_trai_link.STL
+[0.930s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/nhap.urdf
+[0.951s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/tongquan_sldasm.csv
+[0.972s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/urdf/tongquan_sldasm.urdf
+[0.986s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/ament_index/resource_index/package_run_dependencies/tongquan_sldasm
+[1.000s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/ament_index/resource_index/parent_prefix_path/tongquan_sldasm
+[1.014s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/ament_prefix_path.sh
+[1.028s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/ament_prefix_path.dsv
+[1.042s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/path.sh
+[1.056s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/environment/path.dsv
+[1.070s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.bash
+[1.086s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.sh
+[1.099s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.zsh
+[1.119s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/local_setup.dsv
+[1.133s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.dsv
+[1.147s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/ament_index/resource_index/packages/tongquan_sldasm
+[1.167s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/cmake/tongquan_sldasmConfig.cmake
+[1.182s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/cmake/tongquan_sldasmConfig-version.cmake
+[1.202s] -- Symlinking: /home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.xml
+[1.218s] Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/tongquan_sldasm

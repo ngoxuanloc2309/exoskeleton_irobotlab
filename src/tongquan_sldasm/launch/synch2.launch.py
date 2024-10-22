@@ -112,7 +112,16 @@ def generate_launch_description():
         parameters=[ros2_controllers_yaml, use_sim_time],
         output='screen'
     )
+    #########
+    receive_data_node = Node(
+        package = "control_exos",
+        executable='receive_control.py',
+        name='exos',
+        output='screen',
+ #       parameters=['use_sim_time' = False],
+    )
 
+    #########
     # Node MoveIt
     run_move_group_node = Node(
         package="moveit_ros_move_group",
@@ -192,6 +201,12 @@ def generate_launch_description():
             event_handler=OnProcessExit(
                 target_action=chan_phai_controller_spawner,
                 on_exit=[run_move_group_node, rviz_node]
+            )
+        ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=rviz_node,
+                on_exit=[receive_data_node],
             )
         ),
     ])
