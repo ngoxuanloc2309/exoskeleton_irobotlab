@@ -1,131 +1,119 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import JointState
-from std_msgs.msg import Float64MultiArray
+from rclpy.action import ActionClient
+from control_msgs.action import FollowJointTrajectory
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from builtin_interfaces.msg import Duration
 import serial
-import struct
 import math
-from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-import glob
+import time
+import numpy as np
+from collections import deque
 
-class ImprovedControlAngleNode(Node):
+
+class RobotControlNode(Node):
     def __init__(self):
-        super().__init__('improved_control_angle_node')
-        
-        # QoS profile
-        qos_profile = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            durability=DurabilityPolicy.VOLATILE,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=1
-        )
-        
-        # Publishers
-        self.joint_state_pub = self.create_publisher(JointState, 'joint_states', qos_profile)
-        self.chan_trai_pub = self.create_publisher(Float64MultiArray, '/chan_trai_group_controller/commands', qos_profile)
-        self.chan_phai_pub = self.create_publisher(Float64MultiArray, '/chan_phai_group_controller/commands', qos_profile)
-        
-        # Tìm và kết nối cổng serial tự động
-        self.ser = self.connect_serial()
-        
-        # Timer để đọc dữ liệu từ STM32
-        self.create_timer(0.05, self.read_serial)  # 20Hz
-        
-        # Biến để theo dõi thời gian của lần publish cuối cùng
-        self.last_publish_time = self.get_clock().now()
-        
-        # Thêm các tham số có thể cấu hình
-        self.declare_parameter('publish_rate', 20.0)  # Hz
-        self.declare_parameter('angle_threshold', 0.5)  # độ
-        
-        self.get_logger().info('ImprovedControlAngleNode đã được khởi tạo')
+        super().__init__('robot_control_node')
 
-    def connect_serial(self):
-        ports = glob.glob('/dev/ttyUSB*')# + glob.glob('/dev/ttyACM*')
-        if not ports:
-            self.get_logger().error('Không tìm thấy cổng Serial USB!')
-            raise serial.SerialException("No USB Serial port found")
-        
-        for port in ports:
-            try:
-                ser = serial.Serial(port, 115200, timeout=0.1)
-                self.get_logger().info(f'Đã kết nối với cổng {port}')
-                return ser
-            except serial.SerialException:
-                continue
-        
-        self.get_logger().error('Không thể kết nối với bất kỳ cổng Serial nào!')
-        raise serial.SerialException("Unable to connect to any Serial port")
+        # Khởi tạo Serial
+        self.ser = serial.Serial(
+            port='/dev/ttyUSB0',
+            baudrate=115200,
+            timeout=0.0002,#0.001,
+            write_timeout=0,
+            bytesize=serial.EIGHTBITS,
+            parity=serial.PARITY_NONE,
+            stopbits=serial.STOPBITS_ONE
+        )
+        self.ser.reset_input_buffer()
+
+        # Action clients
+        self.chan_trai_client = ActionClient(self, FollowJointTrajectory, '/chan_trai_group_controller/follow_joint_trajectory')
+        self.chan_phai_client = ActionClient(self, FollowJointTrajectory, '/chan_phai_group_controller/follow_joint_trajectory')
+
+        # Tạo vòng lặp chính
+        self.last_serial_time = time.monotonic()
+        self.serial_buffer = bytearray()
+        self.create_timer(0.0005, self.main_loop)  # Mỗi 10ms
+
+        self.get_logger().info('Robot Control Node đã được khởi tạo')
+
+    def main_loop(self):
+        # Đọc dữ liệu serial
+        self.read_serial()
+
+        # Xử lý dữ liệu
+        self.process_data()
 
     def read_serial(self):
         try:
-            if self.ser.in_waiting >= 7:
-                data = self.ser.read(7)
-                if data[0] == 255 and data[1] == 245:
-                    goc_B, goc_C, goc_B_prime, goc_C_prime = struct.unpack('BBBB', data[2:6])
-                    
-                    # Chuyển đổi góc
-                    joints = self.convert_angles(goc_B, goc_C, goc_B_prime, goc_C_prime)
-                    
-                    current_time = self.get_clock().now()
-                    
-                    # Kiểm tra tần suất publish
-                    if self.should_publish(current_time):
-                        self.publish_joint_states(joints, current_time)
-                        self.publish_controller_commands(joints)
-                        
-                        self.last_publish_time = current_time
-                        
-                        self.log_debug_info(current_time, goc_B, goc_C, goc_B_prime, goc_C_prime)
-                    
+            if self.ser.in_waiting:
+                data = self.ser.read(self.ser.in_waiting)
+                self.serial_buffer.extend(data)
         except serial.SerialException as e:
-            self.get_logger().error(f'Lỗi khi đọc dữ liệu Serial: {str(e)}')
-            self.ser = self.connect_serial()  # Thử kết nối lại
+            self.get_logger().error(f'Lỗi đọc Serial: {str(e)}')
 
-    def convert_angles(self, goc_B, goc_C, goc_B_prime, goc_C_prime):
-        return [
-            -goc_B * (math.pi / 180),
-            (180 - goc_C) * (math.pi / 180),
-            -goc_B_prime * (math.pi / 180),
-            (180 - goc_C_prime) * (math.pi / 180)
-        ]
+    def process_data(self):
+        while len(self.serial_buffer) >= 7:
+            if self.serial_buffer[0:2] != b'\xff\xf5':
+                self.serial_buffer.pop(0)
+                continue
 
-    def should_publish(self, current_time):
-        publish_rate = self.get_parameter('publish_rate').value
-        return (current_time - self.last_publish_time).nanoseconds >= 1e9 / publish_rate
+            if self.serial_buffer[6] != 0:
+                self.serial_buffer = self.serial_buffer[1:]
+                continue
 
-    def publish_joint_states(self, joints, current_time):
-        joint_state_msg = JointState()
-        joint_state_msg.header.stamp = current_time.to_msg()
-        joint_state_msg.name = ['joint_1', 'joint_2', 'joint_3', 'joint_4']
-        joint_state_msg.position = joints
-        self.joint_state_pub.publish(joint_state_msg)
+            # Lấy dữ liệu góc
+            angle_data = self.serial_buffer[2:6]
+            self.serial_buffer = self.serial_buffer[7:]
 
-    def publish_controller_commands(self, joints):
-        chan_trai_msg = Float64MultiArray(data=joints[:2])
-        self.chan_trai_pub.publish(chan_trai_msg)
-        
-        chan_phai_msg = Float64MultiArray(data=joints[2:])
-        self.chan_phai_pub.publish(chan_phai_msg)
+            # Xử lý góc và di chuyển chân robot
+            self._process_angles(angle_data)
 
-    def log_debug_info(self, current_time, goc_B, goc_C, goc_B_prime, goc_C_prime):
-        self.get_logger().debug(f'Thời gian xử lý: {(self.get_clock().now() - current_time).nanoseconds} ns')
-        self.get_logger().info(f'Đã nhận góc: B={goc_B}, C={goc_C}, B\'={goc_B_prime}, C\'={goc_C_prime}')
+    def _process_angles(self, angle_data):
+        goc_B, goc_C, goc_B_prime, goc_C_prime = angle_data
 
-    def run(self):
-        try:
-            rclpy.spin(self)
-        except KeyboardInterrupt:
-            pass
-        finally:
-            self.destroy_node()
-            rclpy.shutdown()
+        PI_DIV_180 = math.pi / 180
+        chan_trai_angles = [-goc_B * PI_DIV_180, (180 - goc_C) * PI_DIV_180]
+        chan_phai_angles = [-goc_B_prime * PI_DIV_180, (180 - goc_C_prime) * PI_DIV_180]
+
+        # Xuất góc nhận được ra màn hình
+        self.get_logger().info(f"Góc chân trái: {chan_trai_angles}, Góc chân phải: {chan_phai_angles}")
+
+        # Gửi lệnh di chuyển chân
+        self.move_leg('chan_trai', chan_trai_angles)
+        self.move_leg('chan_phai', chan_phai_angles)
+
+    def move_leg(self, leg_name, positions):
+        trajectory = JointTrajectory()
+        trajectory.joint_names = ['joint_1', 'joint_2'] if leg_name == 'chan_trai' else ['joint_3', 'joint_4']
+
+        point = JointTrajectoryPoint()
+        point.positions = positions
+        point.time_from_start = Duration(sec=0, nanosec=int(0.005 * 1e9)) #0.05
+
+        trajectory.points = [point]
+        goal_msg = FollowJointTrajectory.Goal()
+        goal_msg.trajectory = trajectory
+
+        client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client
+        client.send_goal_async(goal_msg)
+
+        # Xuất vị trí từ điểm bắt đầu đến điểm kết thúc khi di chuyển chân
+        self.get_logger().info(f"Di chuyển {leg_name} từ vị trí {positions[0]} đến vị trí {positions[1]}")
 
 def main(args=None):
     rclpy.init(args=args)
-    node = ImprovedControlAngleNode()
-    node.run()
+    node = RobotControlNode()
+
+    try:
+        rclpy.spin(node)
+    except Exception as e:
+        node.get_logger().error(f'Lỗi: {str(e)}')
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

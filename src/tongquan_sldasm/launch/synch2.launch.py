@@ -115,7 +115,7 @@ def generate_launch_description():
     #########
     receive_data_node = Node(
         package = "control_exos",
-        executable='receive_control.py',
+        executable='thaythe.py',
         name='exos',
         output='screen',
  #       parameters=['use_sim_time' = False],

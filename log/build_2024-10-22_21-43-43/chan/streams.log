@@ -1,0 +1,40 @@
+[0.017s] Invoking command in '/home/logan/exos_new_ws/build/chan': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12
+[0.070s] Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12
+[0.103s] Invoking command in '/home/logan/exos_new_ws/build/chan': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exos_new_ws/build/chan
+[0.120s] -- Install configuration: ""
+[0.120s] -- Execute custom install script
+[0.120s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/ament_index/resource_index/package_run_dependencies/chan
+[0.121s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/ament_index/resource_index/parent_prefix_path/chan
+[0.121s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/environment/ament_prefix_path.sh
+[0.121s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/environment/ament_prefix_path.dsv
+[0.122s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/environment/path.sh
+[0.122s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/environment/path.dsv
+[0.122s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.bash
+[0.123s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.sh
+[0.123s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.zsh
+[0.123s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/local_setup.dsv
+[0.124s] -- Symlinking: /home/logan/exos_new_ws/install/chan/share/chan/package.dsv
+[0.138s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/ament_index/resource_index/packages/chan
+[0.138s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/cmake/chanConfig.cmake
+[0.139s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/cmake/chanConfig-version.cmake
+[0.139s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/package.xml
+[0.140s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/demo.launch.py
+[0.140s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/move_group.launch.py
+[0.141s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/moveit_rviz.launch.py
+[0.141s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/rsp.launch.py
+[0.142s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/setup_assistant.launch.py
+[0.142s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/spawn_controllers.launch.py
+[0.142s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/static_virtual_joint_tfs.launch.py
+[0.142s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/launch/warehouse_db.launch.py
+[0.144s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/initial_positions.yaml
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/joint_limits.yaml
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/kinematics.yaml
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/moveit.rviz
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/moveit_controllers.yaml
+[0.145s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/pilz_cartesian_limits.yaml
+[0.146s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/ros2_controllers.yaml
+[0.146s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/tongquan_sldasm.ros2_control.xacro
+[0.147s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/tongquan_sldasm.srdf
+[0.147s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/config/tongquan_sldasm.urdf.xacro
+[0.148s] -- Up-to-date symlink: /home/logan/exos_new_ws/install/chan/share/chan/.setup_assistant
+[0.153s] Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm /usr/bin/cmake --install /home/logan/exos_new_ws/build/chan

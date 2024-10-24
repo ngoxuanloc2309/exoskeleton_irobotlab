@@ -1,4 +1,3 @@
-
 import os
 import time
 from ament_index_python.packages import get_package_share_directory
@@ -35,18 +34,18 @@ def load_yaml(package_name, file_path):
 def generate_launch_description():
     # Đường dẫn package
     pkg_share = get_package_share_directory('tongquan_sldasm')
-    moveit_config_path = get_package_share_directory('moveit')
+    moveit_config_path = get_package_share_directory('moveit_true')
 
     # Các file cấu hình
     urdf_path = os.path.join(pkg_share, 'urdf', 'tongquan_sldasm.urdf')
     srdf_path = os.path.join(moveit_config_path, 'config', 'tongquan_sldasm.srdf')
     ros2_controllers_yaml = os.path.join(moveit_config_path, 'config', 'ros2_controllers.yaml')
     moveit_controllers_yaml = os.path.join(moveit_config_path, 'config', 'moveit_controllers.yaml')
-    kinematics_yaml = load_yaml("moveit", "config/kinematics.yaml")
+    kinematics_yaml = load_yaml("moveit_true", "config/kinematics.yaml")
 
     # Đọc URDF và SRDF
     robot_description = load_file("tongquan_sldasm", "urdf/tongquan_sldasm.urdf")
-    robot_description_semantic = load_file("moveit", "config/tongquan_sldasm.srdf")
+    robot_description_semantic = load_file("moveit_true", "config/tongquan_sldasm.srdf")
 
     robot_description_kinematics = {"robot_description_kinematics": kinematics_yaml}
 
@@ -60,14 +59,38 @@ def generate_launch_description():
     }
 
     # Cấu hình controllers
-    moveit_controllers = load_yaml("moveit", "config/moveit_controllers.yaml")
+    moveit_controllers = load_yaml("moveit_true", "config/moveit_controllers.yaml")
     
     # Các tham số khác
     use_sim_time = {'use_sim_time': True}
     robot_description_param = {'robot_description': robot_description}
     robot_description_semantic_param = {'robot_description_semantic': robot_description_semantic}
 
-    # Khởi tạo các node
+    # Cấu hình Gazebo parameters
+    gazebo_params = {
+        'max_step_size': 0.001,
+        'real_time_factor': 1.0,
+        'real_time_update_rate': 1000.0,
+        'max_update_rate': 1000.0,
+        'physics': {
+            'type': 'ode',
+            'max_contacts': 20,
+            'ode': {
+                'solver': {
+                    'type': 'quick',
+                    'min_step_size': 0.0001,
+                    'iters': 50,
+                    'sor': 1.3
+                },
+                'constraints': {
+                    'cfm': 0.0,
+                    'erp': 0.2,
+                    'contact_max_correcting_vel': 100.0,
+                    'contact_surface_layer': 0.001
+                }
+            }
+        }
+    }
 
     # Node robot_state_publisher
     robot_state_publisher_node = Node(
@@ -76,32 +99,22 @@ def generate_launch_description():
         name='robot_state_publisher',
         output='screen',
         parameters=[robot_description_param, use_sim_time],
-    #    arguments=['--ros-args', '--log-level', 'debug'],
     )
 
     # Node joint_state_broadcaster
     joint_state_broadcaster_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager','--ros-args',],
+        arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
         parameters=[ros2_controllers_yaml, use_sim_time],
         output='screen',
     )
-
-    # Node controller_manager
-#    controller_manager_node = Node(
-#        package="controller_manager",
-#        executable="ros2_control_node",
-#        parameters=[robot_description_param, ros2_controllers_yaml, use_sim_time],
-#        output="both",
-        #arguments=['--ros-args', '--log-level', 'debug'],
-#    )
 
     # Nodes cho các controller
     chan_trai_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['chan_trai_controller', '--controller-manager', '/controller_manager',],
+        arguments=['chan_trai_group_controller', '--controller-manager', '/controller_manager'],
         parameters=[ros2_controllers_yaml, use_sim_time],
         output='screen'
     )
@@ -109,9 +122,18 @@ def generate_launch_description():
     chan_phai_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['chan_phai_controller', '--controller-manager', '/controller_manager',],
+        arguments=['chan_phai_group_controller', '--controller-manager', '/controller_manager'],
         parameters=[ros2_controllers_yaml, use_sim_time],
         output='screen'
+    )
+
+    # Node nhận dữ liệu
+    receive_data_node = Node(
+        package="control_exos",
+        executable='thaythe.py',
+        name='exos',
+        output='screen',
+        parameters=[{'use_sim_time': False}],
     )
 
     # Node MoveIt
@@ -126,12 +148,11 @@ def generate_launch_description():
             ompl_planning_pipeline_config,
             moveit_controllers,
             use_sim_time,
-            {'robot_description_kinematics.kinematics_solver': 'kdl_kinematics_plugin/KDLKinematicsPlugin'},
         ],
     )
 
     # Node Rviz
-    rviz_config_file = os.path.join(get_package_share_directory("moveit"), "config", "moveit.rviz")
+    rviz_config_file = os.path.join(get_package_share_directory("moveit_true"), "config", "moveit.rviz")
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
@@ -150,13 +171,19 @@ def generate_launch_description():
     # Gazebo
     gazebo = ExecuteProcess(
         cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'],
-        output='screen'
+        output='screen',
+        additional_env={'GAZEBO_MODEL_PATH': os.path.join(pkg_share, 'meshes')},
+        arguments=['-physics', 'ode', '--params-file', '/tmp/gazebo_physics.yaml']
     )
+
+    # Write gazebo params to yaml file
+    with open('/tmp/gazebo_physics.yaml', 'w') as f:
+        yaml.dump(gazebo_params, f)
 
     spawn_entity = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description', '-entity', 'tongquan_sldasm',],
+        arguments=['-topic', 'robot_description', '-entity', 'tongquan_sldasm'],
         output='screen'
     )
 
@@ -175,7 +202,6 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
         robot_state_publisher_node,
-#        controller_manager_node,
 
         RegisterEventHandler(
             event_handler=OnProcessExit(
@@ -193,6 +219,12 @@ def generate_launch_description():
             event_handler=OnProcessExit(
                 target_action=chan_phai_controller_spawner,
                 on_exit=[run_move_group_node, rviz_node]
+            )
+        ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=rviz_node,
+                on_exit=[receive_data_node],
             )
         ),
     ])

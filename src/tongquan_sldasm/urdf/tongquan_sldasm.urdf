@@ -29,7 +29,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="1 0 0 1" />
       </material>
     </visual>
     <collision>
@@ -69,7 +69,7 @@
       <material
         name="">
         <color
-          rgba="0.89804 0.91765 0.92941 1" />
+          rgba="0 0 1 1" />
       </material>
     </visual>
     <collision>
@@ -97,7 +97,7 @@
     <limit
       lower="-0.93"
       upper="0"
-      effort="10"
+      effort="300"
       velocity="0.2" />
   </joint>
   <link
@@ -127,7 +127,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0 0 1 1" />
       </material>
     </visual>
     <collision>
@@ -155,7 +155,7 @@
     <limit
       lower="0"
       upper="0.93"
-      effort="10"
+      effort="300"
       velocity="0.2" />
   </joint>
   <link
@@ -185,7 +185,7 @@
       <material
         name="">
         <color
-          rgba="0.89804 0.91765 0.92941 1" />
+          rgba="0 1 0 1" />
       </material>
     </visual>
     <collision>
@@ -213,7 +213,7 @@
     <limit
       lower="-0.93"
       upper="0"
-      effort="10"
+      effort="300"
       velocity="0.2" />
   </joint>
   <link
@@ -243,7 +243,7 @@
       <material
         name="">
         <color
-          rgba="0.89804 0.91765 0.92941 1" />
+          rgba="0 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -271,7 +271,7 @@
     <limit
       lower="0"
       upper="0.93"
-      effort="10"
+      effort="300"
       velocity="0.2" />
   </joint>
   <transmission name="link_1_trans">

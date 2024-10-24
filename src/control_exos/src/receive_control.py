@@ -2,113 +2,205 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
 from control_msgs.action import FollowJointTrajectory
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from builtin_interfaces.msg import Duration
 import serial
 import struct
 import math
+from threading import Lock
+from collections import deque
+import time
+from std_msgs.msg import Float64MultiArray  # Thêm để publish thông tin debug
 
 class RobotControlNode(Node):
     def __init__(self):
         super().__init__('robot_control_node')
         
-        # Kết nối Serial với STM32
-        self.ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+        # Publishers cho debug
+        self.latency_publisher = self.create_publisher(
+            Float64MultiArray, 
+            'robot_control_latency', 
+            10
+        )
         
-        # Action clients cho điều khiển chân
-        self.chan_trai_client = ActionClient(self, FollowJointTrajectory, '/chan_trai_group_controller/follow_joint_trajectory')
-        self.chan_phai_client = ActionClient(self, FollowJointTrajectory, '/chan_phai_group_controller/follow_joint_trajectory')
+        # Biến đo thời gian
+        self.last_serial_time = time.monotonic()
+        self.last_process_time = time.monotonic()
+        self.frame_count = 0
+        self.total_frames = 0
+        self.start_time = time.monotonic()
         
-        # Thời gian chuyển động
-        self.declare_parameter('movement_duration', 2.0)
-        self.movement_duration = self.get_parameter('movement_duration').value
+        # Metrics
+        self.serial_intervals = deque(maxlen=1000)
+        self.process_times = deque(maxlen=1000)
+        self.action_send_times = deque(maxlen=1000)
         
-        # Timer để đọc dữ liệu từ STM32 và điều khiển robot
-        self.create_timer(0.001, self.control_loop)
+        self.callback_group = ReentrantCallbackGroup()
+        self.serial_lock = Lock()
         
+        # Khởi tạo Serial với priority cao
+        try:
+            self.ser = serial.Serial(
+                port='/dev/ttyUSB0',
+                baudrate=115200,
+                timeout=0.001,
+                write_timeout=0,
+                bytesize=serial.EIGHTBITS,
+                parity=serial.PARITY_NONE,
+                stopbits=serial.STOPBITS_ONE
+            )
+            # Flush buffer khi khởi động
+            self.ser.reset_input_buffer()
+            self.ser.reset_output_buffer()
+        except serial.SerialException as e:
+            self.get_logger().error(f'Lỗi khởi tạo Serial: {str(e)}')
+            raise
+        
+        # Action clients
+        self.chan_trai_client = ActionClient(
+            self, 
+            FollowJointTrajectory, 
+            '/chan_trai_group_controller/follow_joint_trajectory',
+            callback_group=self.callback_group
+        )
+        self.chan_phai_client = ActionClient(
+            self, 
+            FollowJointTrajectory, 
+            '/chan_phai_group_controller/follow_joint_trajectory',
+            callback_group=self.callback_group
+        )
+        
+        # Tạo timers
+        self.create_timer(0.0005, self.read_serial)
+        self.create_timer(0.0005, self.process_data)
+        self.create_timer(1.0, self.publish_metrics)  # Publish metrics mỗi giây
+        
+        self.serial_buffer = bytearray()
         self.get_logger().info('Robot Control Node đã được khởi tạo')
 
-    def control_loop(self):
+    def read_serial(self):
+        current_time = time.monotonic()
+        interval = current_time - self.last_serial_time
+        self.serial_intervals.append(interval)
+        self.last_serial_time = current_time
+
         try:
-            # Đọc dữ liệu từ STM32
-            data = b''
-            while len(data) < 7:  # Đọc cho đến khi nhận đủ 7 byte
-                byte = self.ser.read(1)
-                if not byte:
-                    self.get_logger().warn('Timeout khi đọc dữ liệu từ STM32')
-                    return
-                data += byte
-                
-                # Kiểm tra byte bắt đầu
-                if len(data) == 1 and data[0] != 255:
-                    data = b''  # Reset nếu byte đầu không phải 255
-                    continue
-                
-                # Kiểm tra byte truy cập bắt đầu
-                if len(data) == 2 and data[1] != 245:
-                    data = b''  # Reset nếu byte thứ hai không phải 245
-                    continue
-
-            # Kiểm tra byte kết thúc
-            if data[-1] != 0:
-                self.get_logger().warn('Dữ liệu không hợp lệ: byte kết thúc không phải 0')
-                return
-
-            # Giải mã dữ liệu
-            goc_B, goc_C, goc_B_prime, goc_C_prime = struct.unpack('BBBB', data[2:6])
-            self.get_logger().info(f'Nhận được dữ liệu góc: B={goc_B}, C={goc_C}, B\'={goc_B_prime}, C\'={goc_C_prime}')
-            
-            # Chuyển đổi góc sang radian và áp dụng công thức
-            chan_trai_angles = [-goc_B * (math.pi / 180), (180 - goc_C) * (math.pi / 180)]
-            chan_phai_angles = [-goc_B_prime * (math.pi / 180), (180 - goc_C_prime) * (math.pi / 180)]
-            
-            self.get_logger().info(f'Góc đã chuyển đổi: Chan trái {chan_trai_angles}, Chan phải {chan_phai_angles}')
-            
-            # Điều khiển chân robot
-            self.move_leg('chan_trai', chan_trai_angles)
-            self.move_leg('chan_phai', chan_phai_angles)
-
+            if self.ser.in_waiting:
+                with self.serial_lock:
+                    data = self.ser.read(self.ser.in_waiting)
+                    self.serial_buffer.extend(data)
+                    self.frame_count += 1
         except serial.SerialException as e:
-            self.get_logger().error(f'Lỗi khi đọc dữ liệu từ STM32: {str(e)}')
-        except struct.error as e:
-            self.get_logger().error(f'Lỗi khi giải mã dữ liệu: {str(e)}')
+            self.get_logger().error(f'Lỗi đọc Serial: {str(e)}')
+
+    def process_data(self):
+        process_start = time.monotonic()
+        
+        try:
+            with self.serial_lock:
+                while len(self.serial_buffer) >= 7:
+                    # Tìm byte bắt đầu
+                    if self.serial_buffer[0] != 255 or self.serial_buffer[1] != 245:
+                        self.serial_buffer.pop(0)
+                        continue
+                    
+                    if len(self.serial_buffer) < 7:
+                        break
+                        
+                    if self.serial_buffer[6] != 0:
+                        self.serial_buffer = self.serial_buffer[1:]
+                        continue
+                    
+                    # Xử lý dữ liệu
+                    angle_data = self.serial_buffer[2:6]
+                    self.serial_buffer = self.serial_buffer[7:]
+                    
+                    # Đo thời gian xử lý góc
+                    angle_start = time.monotonic()
+                    self._process_angles(angle_data)
+                    self.process_times.append(time.monotonic() - angle_start)
+                    
+                    self.total_frames += 1
+        
         except Exception as e:
-            self.get_logger().error(f'Lỗi không xác định: {str(e)}')
+            self.get_logger().error(f'Lỗi xử lý dữ liệu: {str(e)}')
+        
+        process_time = time.monotonic() - process_start
+        if process_time > 0.001:  # Log nếu xử lý mất hơn 1ms
+            self.get_logger().warning(f'Xử lý mất nhiều thời gian: {process_time*1000:.2f}ms')
+
+    def _process_angles(self, angle_data):
+        goc_B, goc_C, goc_B_prime, goc_C_prime = angle_data
+        
+        PI_DIV_180 = math.pi / 180
+        chan_trai_angles = [-goc_B * PI_DIV_180, (180 - goc_C) * PI_DIV_180]
+        chan_phai_angles = [-goc_B_prime * PI_DIV_180, (180 - goc_C_prime) * PI_DIV_180]
+        
+        # Đo thời gian gửi action
+        send_start = time.monotonic()
+        self.move_leg('chan_trai', chan_trai_angles)
+        self.move_leg('chan_phai', chan_phai_angles)
+        self.action_send_times.append(time.monotonic() - send_start)
 
     def move_leg(self, leg_name, positions):
-        client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client
-        joint_names = ['joint_1', 'joint_2'] if leg_name == 'chan_trai' else ['joint_3', 'joint_4']
-        
-        goal_msg = FollowJointTrajectory.Goal()
-        
         trajectory = JointTrajectory()
-        trajectory.joint_names = joint_names
+        trajectory.joint_names = ['joint_1', 'joint_2'] if leg_name == 'chan_trai' else ['joint_3', 'joint_4']
         
         point = JointTrajectoryPoint()
         point.positions = positions
-        point.time_from_start = Duration(sec=int(self.movement_duration), nanosec=int((self.movement_duration % 1) * 1e9))
+        point.time_from_start = Duration(sec=0, nanosec=int(0.05 * 1e9))
         
         trajectory.points = [point]
+        
+        goal_msg = FollowJointTrajectory.Goal()
         goal_msg.trajectory = trajectory
-
-        self.get_logger().info(f'Di chuyển {leg_name} đến {positions}')
+        
+        client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client
         future = client.send_goal_async(goal_msg)
-        future.add_done_callback(lambda f: self.goal_response_callback(f, leg_name))
+        future.add_done_callback(lambda f: self._goal_response_callback(f, leg_name))
 
-    def goal_response_callback(self, future, leg_name):
+    def publish_metrics(self):
+        """Publish performance metrics"""
+        now = time.monotonic()
+        duration = now - self.start_time
+        
+        # Tính toán metrics
+        fps = self.total_frames / duration
+        avg_serial_interval = sum(self.serial_intervals) / len(self.serial_intervals) if self.serial_intervals else 0
+        avg_process_time = sum(self.process_times) / len(self.process_times) if self.process_times else 0
+        avg_action_time = sum(self.action_send_times) / len(self.action_send_times) if self.action_send_times else 0
+        
+        # Publish metrics
+        metrics = Float64MultiArray()
+        metrics.data = [
+            fps,  # Frames per second
+            avg_serial_interval * 1000,  # Average interval between serial reads (ms)
+            avg_process_time * 1000,  # Average processing time (ms)
+            avg_action_time * 1000,  # Average action send time (ms)
+        ]
+        self.latency_publisher.publish(metrics)
+        
+        # Log metrics
+        self.get_logger().info(
+            f'\nPerformance Metrics:\n'
+            f'FPS: {fps:.2f}\n'
+            f'Serial Interval: {avg_serial_interval*1000:.2f}ms\n'
+            f'Process Time: {avg_process_time*1000:.2f}ms\n'
+            f'Action Send Time: {avg_action_time*1000:.2f}ms'
+        )
+        
+        # Reset counters
+        self.frame_count = 0
+        self.start_time = now
+
+    def _goal_response_callback(self, future, leg_name):
         goal_handle = future.result()
         if not goal_handle.accepted:
-            self.get_logger().info(f'Mục tiêu bị từ chối cho {leg_name}')
+            self.get_logger().warning(f'Goal rejected: {leg_name}')
             return
-
-        self.get_logger().info(f'Mục tiêu được chấp nhận cho {leg_name}')
-        result_future = goal_handle.get_result_async()
-        result_future.add_done_callback(lambda f: self.get_result_callback(f, leg_name))
-
-    def get_result_callback(self, future, leg_name):
-        result = future.result().result
-        self.get_logger().info(f'Kết quả cho {leg_name}: {result.error_code}')
 
     def __del__(self):
         if hasattr(self, 'ser') and self.ser.is_open:
@@ -119,7 +211,9 @@ def main(args=None):
     
     try:
         robot_control_node = RobotControlNode()
-        rclpy.spin(robot_control_node)
+        executor = MultiThreadedExecutor(num_threads=4)
+        executor.add_node(robot_control_node)
+        executor.spin()
     except Exception as e:
         print(f'Lỗi: {str(e)}')
     finally:
