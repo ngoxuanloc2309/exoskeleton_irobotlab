@@ -6,173 +6,237 @@ from control_msgs.action import FollowJointTrajectory
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from builtin_interfaces.msg import Duration
 import math
-from enum import Enum
+import time
 
-class LegState(Enum):
-    WAITING = 0    # Chờ đến lượt di chuyển
-    MOVING_UP = 1  # Đang di chuyển trên quỹ đạo elip
-    MOVING_DOWN = 2  # Đang di chuyển xuống vị trí ban đầu
-    DONE = 3       # Đã hoàn thành chu kỳ chuyển động
-
-class EllipseTrajectoryNode(Node):
+class ImprovedEllipseTrajectoryNode(Node):
     def __init__(self):
-        super().__init__('ellipse_trajectory_node')
-        
+        super().__init__('improved_ellipse_trajectory_node')
+
         # Khởi tạo action clients
         self.chan_trai_client = ActionClient(self, FollowJointTrajectory, '/chan_trai_group_controller/follow_joint_trajectory')
         self.chan_phai_client = ActionClient(self, FollowJointTrajectory, '/chan_phai_group_controller/follow_joint_trajectory')
-        
+
         # Thông số robot
-        self.link_length_1 = 410.0  # Chiều dài đốt 1
-        self.link_length_2 = 390.0  # Chiều dài đốt 2
-        
-        # Thông số quỹ đạo elip
+        self.link_length_2 = 410.0  # Cạnh a
+        self.link_length_1 = 390.0  # Cạnh b
+
+        # Thông số đường ellipse
         self.ellipse_a = 150.0  # Bán kính lớn
         self.ellipse_b = 80.0   # Bán kính nhỏ
         self.y_offset = 760.0   # Độ cao cơ sở
-        
+
+        # Giới hạn vùng làm việc
+        self.x_min = -150.0
+        self.x_max = 150.0
+
         # Thông số điều khiển
-        self.declare_parameter('movement_duration', 0.05)   #0.5
+        self.declare_parameter('control_frequency', 250.0)  # 250Hz
+        self.declare_parameter('movement_duration', 0.02)   # 0.02s cho mỗi điểm
+        self.declare_parameter('initial_wait_time', 2.0)    # 2s chờ về home position
+
+        self.control_frequency = self.get_parameter('control_frequency').value
         self.movement_duration = self.get_parameter('movement_duration').value
-        
-        # Khởi tạo trạng thái cho mỗi chân
-        self.chan_trai_state = LegState.WAITING
-        self.chan_phai_state = LegState.WAITING
-        
-        # Vị trí hiện tại của mỗi chân
-        self.x_trai = -150.0
-        self.x_phai = -150.0
-        
-        # Cờ báo hoàn thành chuyển động
+        self.initial_wait_time = self.get_parameter('initial_wait_time').value
+
+        # Vị trí hiện tại
+        self.x1 = self.x_min  # x chân trái
+        self.x2 = self.x_min  # x chân phải
+        self.y1 = self.y_offset  # y chân trái
+        self.y2 = self.y_offset  # y chân phải
+
+        # Trạng thái
+        self.move_up = True
         self.trai_done = True
         self.phai_done = True
-        
+        self.initialized = False
+        self.start_time = time.time()
+
         # Timer điều khiển
-        self.timer = self.create_timer(0.1, self.movement_control_loop)
-        
-        # Trạng thái ban đầu
-        self.current_moving_leg = 'chan_trai'  # Bắt đầu với chân trái
-    
-    def inverse_kinematics(self, x, y):
-        """Tính động học ngược cho một chân"""
-        try:
-            theta_x = math.atan2(x, y)
-            c = y / math.cos(theta_x)
-            
-            cos_B = (self.link_length_2**2 + c**2 - self.link_length_1**2) / (2 * self.link_length_2 * c)
-            cos_C = (self.link_length_1**2 + self.link_length_2**2 - c**2) / (2 * self.link_length_1 * self.link_length_2)
-            
-            cos_B = min(1.0, max(-1.0, cos_B))
-            cos_C = min(1.0, max(-1.0, cos_C))
-            
-            angle_B = math.acos(cos_B)
-            angle_C = math.acos(cos_C)
-            
-            d_B = -math.degrees(angle_B) - math.degrees(theta_x)
-            d_C = 180.0 - math.degrees(angle_C)
-            
-            return d_B, d_C
-        except Exception as e:
-            self.get_logger().error(f'Inverse kinematics error: {str(e)}')
+        self.timer = self.create_timer(1.0/self.control_frequency, self.movement_control_loop)
+
+    def check_workspace_limits(self, x, y):
+        """Kiểm tra điểm có nằm trong vùng làm việc không"""
+        if x < self.x_min or x > self.x_max:
+            return False
+
+        r = math.sqrt(x*x + y*y)
+        max_reach = self.link_length_1 + self.link_length_2
+        min_reach = abs(self.link_length_1 - self.link_length_2)
+
+        return min_reach <= r <= max_reach
+
+    def inverse_kinematics(self, x, y, is_left_leg=True):
+        """Động học ngược với xử lý lỗi tốt hơn"""
+        if not self.check_workspace_limits(x, y):
+            self.get_logger().warn(f'Điểm ({x},{y}) nằm ngoài vùng làm việc')
             return None, None
 
-    def calculate_ellipse_point(self, x, is_moving_up):
-        """Tính điểm trên quỹ đạo elip"""
-        if is_moving_up:
-            y = self.y_offset - math.sqrt(self.ellipse_b**2 * (1 - (x**2)/(self.ellipse_a**2)))
-        else:
-            y = self.y_offset
-        return x, y
+        theta_x = math.atan2(x, y)
+        c = y / math.cos(theta_x)
 
-    def move_leg(self, leg_name, positions):
-        """Gửi lệnh điều khiển cho một chân"""
-        if positions[0] is None or positions[1] is None:
-            self.get_logger().error(f'Invalid positions for {leg_name}')
+        cos_B = (self.link_length_1**2 + c**2 - self.link_length_2**2) / (2 * self.link_length_1 * c)
+        cos_C = (self.link_length_2**2 + self.link_length_1**2 - c**2) / (2 * self.link_length_2 * self.link_length_1)
+
+        if abs(cos_B) > 1 or abs(cos_C) > 1:
+            self.get_logger().warn('Không tìm được giải pháp động học ngược hợp lệ')
+            return None, None
+
+        goc_B = math.acos(cos_B)
+        goc_C = math.acos(cos_C)
+
+        new_angle = math.degrees(theta_x)
+        d_C = 180 - math.degrees(goc_C)
+        d_B = -math.degrees(goc_B) - new_angle
+
+        return d_B, d_C
+
+    def calculate_ellipse_point(self, x):
+        """Tính điểm trên đường ellipse"""
+        if abs(x) > self.ellipse_a:
+            return self.y_offset
+        y = self.y_offset - math.sqrt(self.ellipse_b**2 * (1 - (x**2)/(self.ellipse_a**2)))
+        return y
+
+    def go_to_home_position(self):
+        """Di chuyển robot về vị trí home (0,0,0,0)"""
+        for leg_name in ['chan_trai', 'chan_phai']:
+            goal_msg = FollowJointTrajectory.Goal()
+            trajectory = JointTrajectory()
+            trajectory.joint_names = ['joint_1', 'joint_2'] if leg_name == 'chan_trai' else ['joint_3', 'joint_4']
+
+            point = JointTrajectoryPoint()
+            point.positions = [0.0, 0.0]  # Về vị trí 0,0
+            point.velocities = [0.0, 0.0]  # Vận tốc 0
+            point.time_from_start = Duration(sec=2, nanosec=0)  # 2 giây để về home
+
+            trajectory.points = [point]
+            goal_msg.trajectory = trajectory
+
+            client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client
+            future = client.send_goal_async(goal_msg)
+            future.add_done_callback(lambda f, leg=leg_name: self.goal_response_callback(f, leg))
+
+    def movement_control_loop(self):
+        # Kiểm tra thời gian chờ ban đầu
+        if not self.initialized:
+            current_time = time.time()
+            if current_time - self.start_time < self.initial_wait_time:
+                if not hasattr(self, 'home_sent'):
+                    self.go_to_home_position()
+                    self.home_sent = True
+                return
+            self.initialized = True
             return
-            
+
+        if not (self.trai_done and self.phai_done):
+            return
+
+        self.trai_done = False
+        self.phai_done = False
+
+        # Bước di chuyển
+        step = 10
+
+        if self.move_up:
+            # Chân trái di chuyển lên theo đường ellipse
+            new_x1 = self.x1 + step
+            if new_x1 <= self.x_max:
+                self.x1 = new_x1
+                self.y1 = self.calculate_ellipse_point(self.x1)
+
+            # Chân phải giữ nguyên ở mặt đất
+            new_x2 = self.x2 - step
+            if new_x2 >= self.x_min:
+                self.x2 = new_x2
+                self.y2 = self.y_offset
+
+            if self.x1 >= self.x_max:
+                self.move_up = False
+
+        else:
+            # Chân trái giữ nguyên ở mặt đất
+            new_x1 = self.x1 - step
+            if new_x1 >= self.x_min:
+                self.x1 = new_x1
+                self.y1 = self.y_offset
+
+            # Chân phải di chuyển lên theo đường ellipse
+            new_x2 = self.x2 + step
+            if new_x2 <= self.x_max:
+                self.x2 = new_x2
+                self.y2 = self.calculate_ellipse_point(self.x2)
+
+            if self.x1 <= self.x_min:
+                self.move_up = True
+
+        # Tính góc cho cả hai chân
+        angles_trai = self.inverse_kinematics(self.x1, self.y1, True)
+        angles_phai = self.inverse_kinematics(self.x2, self.y2, False)
+
+        # Gửi lệnh điều khiển với quỹ đạo mượt
+        if angles_trai[0] is not None and angles_trai[1] is not None:
+            self.move_leg_smooth('chan_trai', angles_trai)
+        if angles_phai[0] is not None and angles_phai[1] is not None:
+            self.move_leg_smooth('chan_phai', angles_phai)
+
+        self.get_logger().info(f'Đang di chuyển chân: {"Trái" if self.move_up else "Phải"}')
+        self.get_logger().info(f'Chân trái: x={self.x1:.1f}, y={self.y1:.1f}')
+        self.get_logger().info(f'Chân phải: x={self.x2:.1f}, y={self.y2:.1f}')
+
+    def move_leg_smooth(self, leg_name, target_positions):
+        """Gửi lệnh điều khiển cho một chân với chuyển động mượt"""
         client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client
         joint_names = ['joint_1', 'joint_2'] if leg_name == 'chan_trai' else ['joint_3', 'joint_4']
-        
+
         goal_msg = FollowJointTrajectory.Goal()
         trajectory = JointTrajectory()
         trajectory.joint_names = joint_names
-        
+
+        # Tạo điểm quỹ đạo với vận tốc và gia tốc
         point = JointTrajectoryPoint()
-        point.positions = [math.radians(pos) for pos in positions]
-        point.time_from_start = Duration(sec=int(self.movement_duration),
-                                       nanosec=int((self.movement_duration % 1) * 1e9))
-        
+        point.positions = [math.radians(pos) for pos in target_positions]
+        point.velocities = [0.0] * len(target_positions)  # Vận tốc cuối = 0
+        point.accelerations = [0.0] * len(target_positions)  # Gia tốc = 0
+        point.time_from_start = Duration(
+            sec=int(self.movement_duration),
+            nanosec=int((self.movement_duration % 1) * 1e9)
+        )
+
         trajectory.points = [point]
         goal_msg.trajectory = trajectory
-        
-        self.get_logger().info(f'Moving {leg_name} to {positions}')
+
+        self.get_logger().info(f'Di chuyển {leg_name} tới {target_positions}')
         future = client.send_goal_async(goal_msg)
         future.add_done_callback(lambda f: self.goal_response_callback(f, leg_name))
 
     def goal_response_callback(self, future, leg_name):
-        """Callback khi nhận phản hồi từ action server"""
         goal_handle = future.result()
         if not goal_handle.accepted:
-            self.get_logger().warn(f'Goal rejected for {leg_name}')
+            self.get_logger().warn(f'Lệnh điều khiển bị từ chối cho {leg_name}')
+            if leg_name == 'chan_trai':
+                self.trai_done = True
+            else:
+                self.phai_done = True
             return
-            
+
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(lambda f: self.get_result_callback(f, leg_name))
 
     def get_result_callback(self, future, leg_name):
-        """Callback khi nhận kết quả từ action server"""
-        if leg_name == 'chan_trai':
-            self.trai_done = True
-        else:
-            self.phai_done = True
-
-    def movement_control_loop(self):
-        """Hàm điều khiển chính"""
-        if not (self.trai_done and self.phai_done):
-            return
-            
-        self.trai_done = False
-        self.phai_done = False
-        
-        # Xử lý chân trái
-        if self.current_moving_leg == 'chan_trai':
-            # Chân trái di chuyển theo quỹ đạo elip
-            self.x_trai += 15
-            x, y = self.calculate_ellipse_point(self.x_trai, True)
-            angles_trai = self.inverse_kinematics(x, y)
-            
-            # Chân phải giữ nguyên ở mặt đất
-            x_phai, y_phai = self.calculate_ellipse_point(self.x_phai, False)
-            angles_phai = self.inverse_kinematics(x_phai, y_phai)
-            
-            if self.x_trai >= 150.0:
-                self.x_trai = -150.0
-                self.current_moving_leg = 'chan_phai'
-        
-        else:  # Chân phải đang di chuyển
-            # Chân phải di chuyển theo quỹ đạo elip
-            self.x_phai += 15
-            x, y = self.calculate_ellipse_point(self.x_phai, True)
-            angles_phai = self.inverse_kinematics(x, y)
-            
-            # Chân trái giữ nguyên ở mặt đất
-            x_trai, y_trai = self.calculate_ellipse_point(self.x_trai, False)
-            angles_trai = self.inverse_kinematics(x_trai, y_trai)
-            
-            if self.x_phai >= 150.0:
-                self.x_phai = -150.0
-                self.current_moving_leg = 'chan_trai'
-        
-        # Gửi lệnh điều khiển cho cả hai chân
-        self.move_leg('chan_trai', angles_trai)
-        self.move_leg('chan_phai', angles_phai)
-        
-        self.get_logger().info(f'Current moving leg: {self.current_moving_leg}')
-        self.get_logger().info(f'Positions - Left: {self.x_trai:.2f}, Right: {self.x_phai:.2f}')
+        try:
+            result = future.result().result
+            self.get_logger().debug(f'Hoàn thành quỹ đạo cho {leg_name}')
+        except Exception as e:
+            self.get_logger().error(f'Lỗi quỹ đạo cho {leg_name}: {str(e)}')
+        finally:
+            if leg_name == 'chan_trai':
+                self.trai_done = True
+            else:
+                self.phai_done = True
 
 def main(args=None):
     rclpy.init(args=args)
-    node = EllipseTrajectoryNode()
+    node = ImprovedEllipseTrajectoryNode()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

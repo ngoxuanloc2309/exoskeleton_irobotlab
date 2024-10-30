@@ -97,8 +97,8 @@
     <limit
       lower="-0.93"
       upper="0"
-      effort="300"
-      velocity="0.2" />
+      effort="30"
+      velocity="0.5" />
   </joint>
   <link
     name="dau_goi_trai_link">
@@ -155,8 +155,8 @@
     <limit
       lower="0"
       upper="0.93"
-      effort="300"
-      velocity="0.2" />
+      effort="30"
+      velocity="0.5" />
   </joint>
   <link
     name="chan_phai_link">
@@ -213,8 +213,8 @@
     <limit
       lower="-0.93"
       upper="0"
-      effort="300"
-      velocity="0.2" />
+      effort="30"
+      velocity="0.5" />
   </joint>
   <link
     name="dau_goi_phai_link">
@@ -271,8 +271,8 @@
     <limit
       lower="0"
       upper="0.93"
-      effort="300"
-      velocity="0.2" />
+      effort="30"
+      velocity="0.5" />
   </joint>
   <transmission name="link_1_trans">
     <type>transmission_interface/SimpleTransmission</type>

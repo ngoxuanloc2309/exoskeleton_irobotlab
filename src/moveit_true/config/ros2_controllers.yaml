@@ -1,15 +1,13 @@
 # This config file is used by ros2_control
 controller_manager:
   ros__parameters:
-    update_rate: 100000  # Hz
+    update_rate: 100000000  # Hz
 
     chan_trai_group_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-
     chan_phai_group_controller:
       type: joint_trajectory_controller/JointTrajectoryController
-
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -25,6 +23,18 @@ chan_trai_group_controller:
       - position
       - velocity
     
+    gains:
+      joint_1:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 1.0
+      joint_2:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 1.0
+    
 chan_phai_group_controller:
   ros__parameters:
     joints:
@@ -35,3 +45,15 @@ chan_phai_group_controller:
     state_interfaces:
       - position
       - velocity
+    
+    gains:
+      joint_3:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 1.0
+      joint_4:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 1.0
