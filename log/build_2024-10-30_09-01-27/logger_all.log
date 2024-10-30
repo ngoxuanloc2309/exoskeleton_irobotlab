@@ -1,0 +1,450 @@
+[0.301s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.301s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x75412c23ae00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75412c23a380>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75412c23a380>>, mixin_verb=('build',))
+[0.688s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.688s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.688s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.689s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.689s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.689s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.689s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/logan/exos_new_ws'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extensions ['ignore', 'ignore_ament_install']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extension 'ignore'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extension 'ignore_ament_install'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extensions ['colcon_pkg']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extension 'colcon_pkg'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extensions ['colcon_meta']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extension 'colcon_meta'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extensions ['ros']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/chan) by extension 'ros'
+[0.730s] DEBUG:colcon.colcon_core.package_identification:Package 'src/chan' with type 'ros.ament_cmake' and name 'chan'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extensions ['ignore', 'ignore_ament_install']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extension 'ignore'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extension 'ignore_ament_install'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extensions ['colcon_pkg']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extension 'colcon_pkg'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extensions ['colcon_meta']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extension 'colcon_meta'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extensions ['ros']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_exos) by extension 'ros'
+[0.733s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control_exos' with type 'ros.ament_cmake' and name 'control_exos'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extensions ['ignore', 'ignore_ament_install']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extension 'ignore'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extension 'ignore_ament_install'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extensions ['colcon_pkg']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extension 'colcon_pkg'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extensions ['colcon_meta']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extension 'colcon_meta'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extensions ['ros']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit) by extension 'ros'
+[0.738s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit' with type 'ros.ament_cmake' and name 'moveit'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extensions ['ignore', 'ignore_ament_install']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extension 'ignore'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extension 'ignore_ament_install'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extensions ['colcon_pkg']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extension 'colcon_pkg'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extensions ['colcon_meta']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extension 'colcon_meta'
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extensions ['ros']
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_2) by extension 'ros'
+[0.742s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_2' with type 'ros.ament_cmake' and name 'moveit_2'
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extensions ['ignore', 'ignore_ament_install']
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extension 'ignore'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extension 'ignore_ament_install'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extensions ['colcon_pkg']
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extension 'colcon_pkg'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extensions ['colcon_meta']
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extension 'colcon_meta'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extensions ['ros']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_true) by extension 'ros'
+[0.746s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_true' with type 'ros.ament_cmake' and name 'moveit_true'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extensions ['ignore', 'ignore_ament_install']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extension 'ignore'
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extension 'ignore_ament_install'
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extensions ['colcon_pkg']
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extension 'colcon_pkg'
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extensions ['colcon_meta']
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extension 'colcon_meta'
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extensions ['ros']
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/tongquan_sldasm) by extension 'ros'
+[0.749s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tongquan_sldasm' with type 'ros.ament_cmake' and name 'tongquan_sldasm'
+[0.749s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.749s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.749s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.749s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.749s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.802s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.802s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.810s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 367 installed packages in /opt/ros/humble
+[0.814s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.953s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'cmake_args' from command line to 'None'
+[0.953s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'cmake_target' from command line to 'None'
+[0.953s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.953s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'cmake_clean_cache' from command line to 'False'
+[0.953s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'cmake_clean_first' from command line to 'False'
+[0.953s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'cmake_force_configure' from command line to 'False'
+[0.953s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'ament_cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'catkin_cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'control_exos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.954s] DEBUG:colcon.colcon_core.verb:Building package 'control_exos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/logan/exos_new_ws/build/control_exos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/logan/exos_new_ws/install/control_exos', 'merge_install': False, 'path': '/home/logan/exos_new_ws/src/control_exos', 'symlink_install': False, 'test_result_base': None}
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'cmake_args' from command line to 'None'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'cmake_target' from command line to 'None'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'cmake_clean_first' from command line to 'False'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'cmake_force_configure' from command line to 'False'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'ament_cmake_args' from command line to 'None'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.955s] Level 5:colcon.colcon_core.verb:set package 'tongquan_sldasm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.955s] DEBUG:colcon.colcon_core.verb:Building package 'tongquan_sldasm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/logan/exos_new_ws/build/tongquan_sldasm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/logan/exos_new_ws/install/tongquan_sldasm', 'merge_install': False, 'path': '/home/logan/exos_new_ws/src/tongquan_sldasm', 'symlink_install': False, 'test_result_base': None}
+[0.956s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'cmake_args' from command line to 'None'
+[0.956s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'cmake_target' from command line to 'None'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'cmake_clean_cache' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'cmake_clean_first' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'cmake_force_configure' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'ament_cmake_args' from command line to 'None'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'catkin_cmake_args' from command line to 'None'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'chan' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.957s] DEBUG:colcon.colcon_core.verb:Building package 'chan' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/logan/exos_new_ws/build/chan', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/logan/exos_new_ws/install/chan', 'merge_install': False, 'path': '/home/logan/exos_new_ws/src/chan', 'symlink_install': False, 'test_result_base': None}
+[0.958s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'cmake_args' from command line to 'None'
+[0.958s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'cmake_target' from command line to 'None'
+[0.958s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.958s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'cmake_clean_cache' from command line to 'False'
+[0.958s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'cmake_clean_first' from command line to 'False'
+[0.959s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'cmake_force_configure' from command line to 'False'
+[0.959s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'ament_cmake_args' from command line to 'None'
+[0.959s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'catkin_cmake_args' from command line to 'None'
+[0.959s] Level 5:colcon.colcon_core.verb:set package 'moveit' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.959s] DEBUG:colcon.colcon_core.verb:Building package 'moveit' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/logan/exos_new_ws/build/moveit', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/logan/exos_new_ws/install/moveit', 'merge_install': False, 'path': '/home/logan/exos_new_ws/src/moveit', 'symlink_install': False, 'test_result_base': None}
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'cmake_args' from command line to 'None'
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'cmake_target' from command line to 'None'
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'cmake_clean_first' from command line to 'False'
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'cmake_force_configure' from command line to 'False'
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'ament_cmake_args' from command line to 'None'
+[0.960s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.961s] Level 5:colcon.colcon_core.verb:set package 'moveit_2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.961s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/logan/exos_new_ws/build/moveit_2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/logan/exos_new_ws/install/moveit_2', 'merge_install': False, 'path': '/home/logan/exos_new_ws/src/moveit_2', 'symlink_install': False, 'test_result_base': None}
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'cmake_args' from command line to 'None'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'cmake_target' from command line to 'None'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'cmake_clean_cache' from command line to 'False'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'cmake_clean_first' from command line to 'False'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'cmake_force_configure' from command line to 'False'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'ament_cmake_args' from command line to 'None'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'catkin_cmake_args' from command line to 'None'
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'moveit_true' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.962s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_true' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/logan/exos_new_ws/build/moveit_true', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/logan/exos_new_ws/install/moveit_true', 'merge_install': False, 'path': '/home/logan/exos_new_ws/src/moveit_true', 'symlink_install': False, 'test_result_base': None}
+[0.963s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.965s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.966s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/logan/exos_new_ws/src/tongquan_sldasm' with build type 'ament_cmake'
+[0.966s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/logan/exos_new_ws/src/tongquan_sldasm'
+[0.975s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.976s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.976s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.986s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/logan/exos_new_ws/src/control_exos' with build type 'ament_cmake'
+[0.986s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/logan/exos_new_ws/src/control_exos'
+[0.987s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.987s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12
+[1.004s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[1.078s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/control_exos -- -j12 -l12
+[1.082s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/tongquan_sldasm -- -j12 -l12
+[1.123s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/control_exos': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos
+[1.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/tongquan_sldasm': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/tongquan_sldasm
+[1.174s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_exos)
+[1.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/control_exos' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/control_exos
+[1.182s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos' for CMake module files
+[1.184s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos' for CMake config files
+[1.185s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_exos', 'cmake_prefix_path')
+[1.185s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/control_exos/share/control_exos/hook/cmake_prefix_path.ps1'
+[1.187s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/control_exos/share/control_exos/hook/cmake_prefix_path.dsv'
+[1.188s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/control_exos/share/control_exos/hook/cmake_prefix_path.sh'
+[1.189s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/lib'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/bin'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/lib/pkgconfig/control_exos.pc'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/lib/python3.10/site-packages'
+[1.191s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/bin'
+[1.191s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.ps1'
+[1.193s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.dsv'
+[1.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.sh'
+[1.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.bash'
+[1.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.zsh'
+[1.199s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/control_exos/share/colcon-core/packages/control_exos)
+[1.202s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tongquan_sldasm)
+[1.203s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/tongquan_sldasm' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/tongquan_sldasm
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm' for CMake module files
+[1.204s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm' for CMake config files
+[1.205s] Level 1:colcon.colcon_core.shell:create_environment_hook('tongquan_sldasm', 'cmake_prefix_path')
+[1.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/hook/cmake_prefix_path.ps1'
+[1.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/hook/cmake_prefix_path.dsv'
+[1.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/hook/cmake_prefix_path.sh'
+[1.208s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/bin'
+[1.208s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/lib/pkgconfig/tongquan_sldasm.pc'
+[1.209s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/lib/python3.10/site-packages'
+[1.209s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/bin'
+[1.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.ps1'
+[1.211s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.dsv'
+[1.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.sh'
+[1.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.bash'
+[1.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.zsh'
+[1.213s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/tongquan_sldasm/share/colcon-core/packages/tongquan_sldasm)
+[1.242s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_exos)
+[1.242s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos' for CMake module files
+[1.244s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos' for CMake config files
+[1.244s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_exos', 'cmake_prefix_path')
+[1.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/control_exos/share/control_exos/hook/cmake_prefix_path.ps1'
+[1.245s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/control_exos/share/control_exos/hook/cmake_prefix_path.dsv'
+[1.246s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/control_exos/share/control_exos/hook/cmake_prefix_path.sh'
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/lib'
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/bin'
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/lib/pkgconfig/control_exos.pc'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/lib/python3.10/site-packages'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/control_exos/bin'
+[1.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.ps1'
+[1.250s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.dsv'
+[1.251s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.sh'
+[1.251s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.bash'
+[1.252s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/control_exos/share/control_exos/package.zsh'
+[1.253s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/control_exos/share/colcon-core/packages/control_exos)
+[1.255s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tongquan_sldasm)
+[1.255s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm' for CMake module files
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm' for CMake config files
+[1.257s] Level 1:colcon.colcon_core.shell:create_environment_hook('tongquan_sldasm', 'cmake_prefix_path')
+[1.257s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/hook/cmake_prefix_path.ps1'
+[1.258s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/hook/cmake_prefix_path.dsv'
+[1.259s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/hook/cmake_prefix_path.sh'
+[1.260s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/bin'
+[1.260s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/lib/pkgconfig/tongquan_sldasm.pc'
+[1.260s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/lib/python3.10/site-packages'
+[1.261s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/tongquan_sldasm/bin'
+[1.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.ps1'
+[1.262s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.dsv'
+[1.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.sh'
+[1.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.bash'
+[1.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/tongquan_sldasm/share/tongquan_sldasm/package.zsh'
+[1.265s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/tongquan_sldasm/share/colcon-core/packages/tongquan_sldasm)
+[1.266s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/logan/exos_new_ws/src/chan' with build type 'ament_cmake'
+[1.266s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/logan/exos_new_ws/src/chan'
+[1.267s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.267s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.274s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/logan/exos_new_ws/src/moveit' with build type 'ament_cmake'
+[1.274s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/logan/exos_new_ws/src/moveit'
+[1.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.281s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/logan/exos_new_ws/src/moveit_2' with build type 'ament_cmake'
+[1.282s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/logan/exos_new_ws/src/moveit_2'
+[1.282s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.282s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.289s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/logan/exos_new_ws/src/moveit_true' with build type 'ament_cmake'
+[1.289s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/logan/exos_new_ws/src/moveit_true'
+[1.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/chan': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12
+[1.307s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/moveit': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit -- -j12 -l12
+[1.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/moveit_2': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit_2 -- -j12 -l12
+[1.319s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/moveit_true': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit_true -- -j12 -l12
+[1.369s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/moveit_2' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit_2 -- -j12 -l12
+[1.372s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/moveit_true' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit_true -- -j12 -l12
+[1.375s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/moveit' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/moveit -- -j12 -l12
+[1.377s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --build /home/logan/exos_new_ws/build/chan -- -j12 -l12
+[1.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/moveit_2': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit_2
+[1.408s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/moveit_true': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit_true
+[1.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/chan': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/chan
+[1.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/logan/exos_new_ws/build/moveit': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit
+[1.441s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_2)
+[1.441s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2' for CMake module files
+[1.442s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/moveit_2' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit_2
+[1.442s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2' for CMake config files
+[1.443s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_2', 'cmake_prefix_path')
+[1.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/hook/cmake_prefix_path.ps1'
+[1.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/hook/cmake_prefix_path.dsv'
+[1.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/hook/cmake_prefix_path.sh'
+[1.445s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/bin'
+[1.445s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/lib/pkgconfig/moveit_2.pc'
+[1.446s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/lib/python3.10/site-packages'
+[1.446s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/bin'
+[1.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.ps1'
+[1.448s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.dsv'
+[1.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.sh'
+[1.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.bash'
+[1.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.zsh'
+[1.451s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/moveit_2/share/colcon-core/packages/moveit_2)
+[1.457s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_true)
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true' for CMake module files
+[1.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/moveit_true' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit_true
+[1.461s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true' for CMake config files
+[1.462s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_true', 'cmake_prefix_path')
+[1.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/hook/cmake_prefix_path.ps1'
+[1.463s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/hook/cmake_prefix_path.dsv'
+[1.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/hook/cmake_prefix_path.sh'
+[1.464s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/bin'
+[1.464s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/lib/pkgconfig/moveit_true.pc'
+[1.464s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/lib/python3.10/site-packages'
+[1.465s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/bin'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.ps1'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.dsv'
+[1.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.sh'
+[1.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.bash'
+[1.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.zsh'
+[1.467s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/moveit_true/share/colcon-core/packages/moveit_true)
+[1.469s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit)
+[1.470s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit' for CMake module files
+[1.470s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/moveit' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/moveit
+[1.471s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit' for CMake config files
+[1.472s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit', 'cmake_prefix_path')
+[1.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit/share/moveit/hook/cmake_prefix_path.ps1'
+[1.473s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/moveit/share/moveit/hook/cmake_prefix_path.dsv'
+[1.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit/share/moveit/hook/cmake_prefix_path.sh'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/bin'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/lib/pkgconfig/moveit.pc'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/lib/python3.10/site-packages'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/bin'
+[1.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.ps1'
+[1.475s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/moveit/share/moveit/package.dsv'
+[1.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.sh'
+[1.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.bash'
+[1.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.zsh'
+[1.477s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/moveit/share/colcon-core/packages/moveit)
+[1.478s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(chan)
+[1.478s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan' for CMake module files
+[1.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/logan/exos_new_ws/build/chan' returned '0': AMENT_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/logan/exos_new_ws/install/tongquan_sldasm:/opt/ros/humble /usr/bin/cmake --install /home/logan/exos_new_ws/build/chan
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan' for CMake config files
+[1.480s] Level 1:colcon.colcon_core.shell:create_environment_hook('chan', 'cmake_prefix_path')
+[1.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/chan/share/chan/hook/cmake_prefix_path.ps1'
+[1.481s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/chan/share/chan/hook/cmake_prefix_path.dsv'
+[1.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/chan/share/chan/hook/cmake_prefix_path.sh'
+[1.482s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/bin'
+[1.482s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/lib/pkgconfig/chan.pc'
+[1.482s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/lib/python3.10/site-packages'
+[1.482s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/bin'
+[1.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.ps1'
+[1.483s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/chan/share/chan/package.dsv'
+[1.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.sh'
+[1.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.bash'
+[1.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.zsh'
+[1.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/chan/share/colcon-core/packages/chan)
+[1.491s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_2)
+[1.491s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2' for CMake module files
+[1.492s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2' for CMake config files
+[1.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_2', 'cmake_prefix_path')
+[1.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/hook/cmake_prefix_path.ps1'
+[1.493s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/hook/cmake_prefix_path.dsv'
+[1.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/hook/cmake_prefix_path.sh'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/bin'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/lib/pkgconfig/moveit_2.pc'
+[1.495s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/lib/python3.10/site-packages'
+[1.495s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_2/bin'
+[1.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.ps1'
+[1.496s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.dsv'
+[1.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.sh'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.bash'
+[1.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_2/share/moveit_2/package.zsh'
+[1.498s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/moveit_2/share/colcon-core/packages/moveit_2)
+[1.502s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_true)
+[1.502s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true' for CMake module files
+[1.502s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true' for CMake config files
+[1.503s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_true', 'cmake_prefix_path')
+[1.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/hook/cmake_prefix_path.ps1'
+[1.504s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/hook/cmake_prefix_path.dsv'
+[1.504s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/hook/cmake_prefix_path.sh'
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/bin'
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/lib/pkgconfig/moveit_true.pc'
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/lib/python3.10/site-packages'
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit_true/bin'
+[1.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.ps1'
+[1.506s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.dsv'
+[1.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.sh'
+[1.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.bash'
+[1.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit_true/share/moveit_true/package.zsh'
+[1.508s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/moveit_true/share/colcon-core/packages/moveit_true)
+[1.515s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(chan)
+[1.516s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan' for CMake module files
+[1.517s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan' for CMake config files
+[1.517s] Level 1:colcon.colcon_core.shell:create_environment_hook('chan', 'cmake_prefix_path')
+[1.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/chan/share/chan/hook/cmake_prefix_path.ps1'
+[1.518s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/chan/share/chan/hook/cmake_prefix_path.dsv'
+[1.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/chan/share/chan/hook/cmake_prefix_path.sh'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/bin'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/lib/pkgconfig/chan.pc'
+[1.520s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/lib/python3.10/site-packages'
+[1.520s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/chan/bin'
+[1.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.ps1'
+[1.521s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/chan/share/chan/package.dsv'
+[1.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.sh'
+[1.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.bash'
+[1.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/chan/share/chan/package.zsh'
+[1.523s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/chan/share/colcon-core/packages/chan)
+[1.524s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit)
+[1.524s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit' for CMake module files
+[1.525s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit' for CMake config files
+[1.526s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit', 'cmake_prefix_path')
+[1.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit/share/moveit/hook/cmake_prefix_path.ps1'
+[1.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/logan/exos_new_ws/install/moveit/share/moveit/hook/cmake_prefix_path.dsv'
+[1.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/logan/exos_new_ws/install/moveit/share/moveit/hook/cmake_prefix_path.sh'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/bin'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/lib/pkgconfig/moveit.pc'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/lib/python3.10/site-packages'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/logan/exos_new_ws/install/moveit/bin'
+[1.528s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.ps1'
+[1.529s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/logan/exos_new_ws/install/moveit/share/moveit/package.dsv'
+[1.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.sh'
+[1.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.bash'
+[1.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/logan/exos_new_ws/install/moveit/share/moveit/package.zsh'
+[1.531s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/logan/exos_new_ws/install/moveit/share/colcon-core/packages/moveit)
+[1.531s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.531s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.531s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.531s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.539s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.539s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.539s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.555s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.555s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/logan/exos_new_ws/install/local_setup.ps1'
+[1.557s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/logan/exos_new_ws/install/_local_setup_util_ps1.py'
+[1.558s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/logan/exos_new_ws/install/setup.ps1'
+[1.559s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/logan/exos_new_ws/install/local_setup.sh'
+[1.560s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/logan/exos_new_ws/install/_local_setup_util_sh.py'
+[1.561s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/logan/exos_new_ws/install/setup.sh'
+[1.562s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/logan/exos_new_ws/install/local_setup.bash'
+[1.562s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/logan/exos_new_ws/install/setup.bash'
+[1.563s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/logan/exos_new_ws/install/local_setup.zsh'
+[1.564s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/logan/exos_new_ws/install/setup.zsh'

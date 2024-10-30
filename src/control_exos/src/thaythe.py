@@ -20,7 +20,7 @@ class RobotControlNode(Node):
         self.ser = serial.Serial(
             port='/dev/ttyUSB0',
             baudrate=115200,
-            timeout=0.0002,#0.001,
+            timeout=0.0001,#0.001,
             write_timeout=0,
             bytesize=serial.EIGHTBITS,
             parity=serial.PARITY_NONE,
@@ -88,18 +88,14 @@ class RobotControlNode(Node):
     def move_leg(self, leg_name, positions):
         trajectory = JointTrajectory()
         trajectory.joint_names = ['joint_1', 'joint_2'] if leg_name == 'chan_trai' else ['joint_3', 'joint_4']
-
         point = JointTrajectoryPoint()
         point.positions = positions
-        point.time_from_start = Duration(sec=0, nanosec=int(0.005 * 1e9)) #0.05
-
+        point.time_from_start = Duration(sec=0, nanosec=int(0.05 * 1e9)) #0.05
         trajectory.points = [point]
         goal_msg = FollowJointTrajectory.Goal()
         goal_msg.trajectory = trajectory
-
         client = self.chan_trai_client if leg_name == 'chan_trai' else self.chan_phai_client
         client.send_goal_async(goal_msg)
-
         # Xuất vị trí từ điểm bắt đầu đến điểm kết thúc khi di chuyển chân
         self.get_logger().info(f"Di chuyển {leg_name} từ vị trí {positions[0]} đến vị trí {positions[1]}")
 
